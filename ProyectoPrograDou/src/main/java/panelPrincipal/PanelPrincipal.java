@@ -4,10 +4,15 @@ import javax.swing.*;
 import java.awt.*;
 
 public class PanelPrincipal extends JPanel {
-	BotonIda bi = new BotonIda();
-	BotonVuelta bv = new BotonVuelta();
-	Doubus db = new Doubus();
-	Publicidad p = new Publicidad();
+	BotonIda bi;
+	BotonVuelta bv;
+	Doubus db;
+	Publicidad p;
+	
+	BotonDestinoIda bdi;
+	BotonDestinoVuelta bdv;
+	BotonFechaIda bfi;
+	BotonFechaVuelta bfv;
     public PanelPrincipal() {
         this.setLayout(null);
         this.setBounds(0,0,1080,720);
@@ -18,9 +23,19 @@ public class PanelPrincipal extends JPanel {
         db = new Doubus();
         p = new Publicidad();
         
+        bdi = new BotonDestinoIda();
+        bdv = new BotonDestinoVuelta();
+        bfi = new BotonFechaIda();
+        bfv = new BotonFechaVuelta();
+        
         this.add(bi);
         this.add(bv);
         this.add(db);
         this.add(p);
+        
+        //this.add(bdi);
+        //this.add(bdv);
+        //this.add(bfi);
+        //this.add(bfv); 
     }
 }
