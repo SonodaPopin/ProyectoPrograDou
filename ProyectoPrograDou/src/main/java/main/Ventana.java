@@ -1,6 +1,8 @@
-package GUI;
+package main;
 
 import javax.swing.*;
+
+import panelPrincipal.PanelPrincipal;
 
 public class Ventana extends JFrame{
     public Ventana() {
@@ -12,5 +14,8 @@ public class Ventana extends JFrame{
         this.setSize(1080, 720);
         this.setVisible(true);
         this.setResizable(false);
+        
+        PanelPrincipal pp = new PanelPrincipal();
+        this.add(pp);
     }
 }
