@@ -20,5 +20,29 @@ public class BotonIda extends JPanel {
         Font font = new Font("Arial", Font.BOLD, 18);
         g.setFont(font);
         g.drawString("Comprar pasaje solo Ida", 35, 20);
+
+        g.setColor(Color.RED);
+        g.fillRect(20, 40, 100, 35);
+        g.setColor(Color.BLACK);
+        g.drawRect(20, 40, 100, 35);
+
+        g.setColor(Color.CYAN);
+        g.fillRect(25, 45, 20, 15);
+        g.fillRect(50, 45, 20, 15);
+        g.fillRect(75, 45, 20, 15);
+        g.fillRect(100, 45, 20, 15);
+
+        g.setColor(Color.GRAY);
+        g.fillOval(30, 65, 20, 20);
+        g.fillOval(90, 65, 20, 20);
+
+        g.setColor(Color.BLUE);
+        int[] xPoints = {180, 200, 180};
+        int[] yPoints = {50, 60, 70};
+        g.fillPolygon(xPoints, yPoints, 3);
+        g.fillRect(160, 58, 20, 5);
+
+        g.setColor(Color.YELLOW);
+        g.fillOval(215, 45, 30, 30);
     }
 }
