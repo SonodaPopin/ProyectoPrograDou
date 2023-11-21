@@ -38,4 +38,13 @@ public class PanelPrincipal extends JPanel {
         //this.add(bfi);
         //this.add(bfv); 
     }
+
+    @Override
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+
+        ImageIcon bus = new ImageIcon("bus.jpg");
+
+        g.drawImage(bus.getImage(), 0, 0, 1080, 720, null);
+    }
 }

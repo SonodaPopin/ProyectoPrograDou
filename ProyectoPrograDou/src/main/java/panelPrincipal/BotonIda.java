@@ -14,7 +14,7 @@ public class BotonIda extends JPanel {
         super.paintComponent(g);
 
         g.setColor(Color.BLACK);
-        g.fillRect(30, 2, 225, 25);
+        g.fillRect(0, 0, 300, 28);
 
         g.setColor(Color.WHITE);
         Font font = new Font("Arial", Font.BOLD, 18);
@@ -43,6 +43,9 @@ public class BotonIda extends JPanel {
         g.fillRect(160, 58, 20, 5);
 
         g.setColor(Color.YELLOW);
-        g.fillOval(215, 45, 30, 30);
+        g.fillRect(220, 45, 20, 15);
+
+        g.setColor(Color.gray);
+        g.fillRect(220, 45, 5, 30);
     }
 }
