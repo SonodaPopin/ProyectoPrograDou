@@ -7,7 +7,7 @@ import java.awt.event.*;
 public class BotonVuelta extends JPanel {
     BotonVuelta(){
         this.setBounds(50,520,300,100);
-        this.setBackground(Color.lightGray);
+        this.setBackground(Color.gray);
     }
     @Override
     protected void paintComponent(Graphics g) {
@@ -32,7 +32,7 @@ public class BotonVuelta extends JPanel {
         g.fillRect(75, 45, 20, 15);
         g.fillRect(100, 45, 20, 15);
 
-        g.setColor(Color.GRAY);
+        g.setColor(Color.DARK_GRAY);
         g.fillOval(30, 65, 20, 20);
         g.fillOval(90, 65, 20, 20);
 
@@ -50,7 +50,7 @@ public class BotonVuelta extends JPanel {
         g.setColor(Color.YELLOW);
         g.fillRect(220, 45, 20, 15);
 
-        g.setColor(Color.gray);
+        g.setColor(Color.darkGray);
         g.fillRect(220, 45, 5, 30);
     }
 }
