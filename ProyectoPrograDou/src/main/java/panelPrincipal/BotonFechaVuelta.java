@@ -14,6 +14,7 @@ public class BotonFechaVuelta extends JPanel{
     	a = new Año();
         this.setBounds(740,270,240,200);
         this.setBackground(Color.WHITE);
+        this.setLayout(null);
         this.add(d);
         this.add(m);
         this.add(a);

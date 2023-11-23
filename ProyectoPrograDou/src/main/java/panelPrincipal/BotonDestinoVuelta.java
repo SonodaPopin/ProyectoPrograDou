@@ -15,6 +15,7 @@ public class BotonDestinoVuelta extends JPanel{
     	fi = new FlechaIzquierda();
         this.setBounds(430,150,550,60);
         this.setBackground(Color.WHITE);
+        this.setLayout(null);
         this.add(d);
         this.add(fd);
         this.add(fi);

@@ -4,6 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 
 public class PanelPrincipal extends JPanel {
+	int boton;
+	JFrame v;
 	BotonIda bi;
 	BotonVuelta bv;
 	Doubus db;
@@ -13,13 +15,15 @@ public class PanelPrincipal extends JPanel {
 	BotonFechaIda bfi;
 	BotonFechaVuelta bfv;
 	BotonBuscar bb;
-    public PanelPrincipal() {
+    public PanelPrincipal(JFrame v) {
         this.setLayout(null);
         this.setBounds(0,0,1080,720);
         this.setBackground(Color.DARK_GRAY);
+        this.setLayout(null);
+        this.v = v;
         
-        bi = new BotonIda();
-        bv = new BotonVuelta();
+        bi = new BotonIda(this);
+        bv = new BotonVuelta(this);
         db = new Doubus();
         
         bdi = new BotonDestinoIda();
@@ -30,16 +34,36 @@ public class PanelPrincipal extends JPanel {
         
         this.add(bi);
         this.add(bv);
-        this.add(db);
-        botonesSi();
-        
+        this.add(db);        
     }
     public void botonesSi() {
-        this.add(bdi);
-        this.add(bdv);
-        this.add(bfi);
-        this.add(bfv); 
-        this.add(bb);
+        if (boton==1) {
+            this.add(bdi);
+            this.add(bdv);
+            this.add(bfi);
+            this.add(bb);
+            this.remove(bfv); 
+            bi.setBorder(BorderFactory.createLineBorder(Color.GREEN, 2));
+    		bv.setBorder(BorderFactory.createEmptyBorder());
+        }
+        if (boton==2) {
+            this.add(bdi);
+            this.add(bdv);
+            this.add(bfi);
+            this.add(bb);
+            this.add(bfv); 
+            bv.setBorder(BorderFactory.createLineBorder(Color.GREEN, 2));
+    		bi.setBorder(BorderFactory.createEmptyBorder());
+        }
+        v.repaint();
+    }
+    public void botonesNo() {
+        this.remove(bdi);
+        this.remove(bdv);
+        this.remove(bfi);
+        this.remove(bb);
+        this.remove(bfv); 
+        v.repaint();
     }
     @Override
     protected void paintComponent(Graphics g) {

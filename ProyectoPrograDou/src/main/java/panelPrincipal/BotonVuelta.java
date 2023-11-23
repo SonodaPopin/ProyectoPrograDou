@@ -4,10 +4,14 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class BotonVuelta extends JPanel {
-    BotonVuelta(){
+public class BotonVuelta extends JPanel implements MouseListener{
+	PanelPrincipal pp;
+    BotonVuelta(PanelPrincipal pp){
+    	this.pp = pp;
         this.setBounds(50,520,300,100);
         this.setBackground(Color.gray);
+        this.setLayout(null);
+        this.addMouseListener(this);
     }
     @Override
     protected void paintComponent(Graphics g) {
@@ -53,4 +57,37 @@ public class BotonVuelta extends JPanel {
         g.setColor(Color.darkGray);
         g.fillRect(220, 45, 5, 30);
     }
+	@Override
+	public void mouseClicked(MouseEvent e) {
+		
+	}
+	@Override
+	public void mousePressed(MouseEvent e) {
+		if(pp.boton!=2) {
+			pp.boton = 2;
+			pp.botonesSi();
+		}
+		else if(pp.boton==2) {
+			pp.botonesNo();
+	        this.setBorder(BorderFactory.createLineBorder(Color.YELLOW, 2));
+			pp.boton = 0;
+		}
+	}
+	@Override
+	public void mouseReleased(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void mouseEntered(MouseEvent e) {
+		if (pp.boton != 2) {
+        this.setBorder(BorderFactory.createLineBorder(Color.YELLOW, 2));
+		}
+	}
+	@Override
+	public void mouseExited(MouseEvent e) {
+		if (pp.boton != 2) {
+		this.setBorder(BorderFactory.createEmptyBorder());
+		}
+	}
 }

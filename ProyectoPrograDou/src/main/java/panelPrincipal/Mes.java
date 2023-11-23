@@ -14,6 +14,7 @@ public class Mes extends JPanel{
     	faa = new FlechaAbajo();
     	n = new Numero2();
         this.setBounds(80,70,80,130);
+        this.setLayout(null);
         this.add(fa);
         this.add(faa);
         this.add(n);

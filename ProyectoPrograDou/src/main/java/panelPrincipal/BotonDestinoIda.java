@@ -15,6 +15,7 @@ public class BotonDestinoIda extends JPanel{
     	fi = new FlechaIzquierda();
         this.setBounds(430,50,550,60);
         this.setBackground(Color.WHITE);
+        this.setLayout(null);
         this.add(d);
         this.add(fd);
         this.add(fi);

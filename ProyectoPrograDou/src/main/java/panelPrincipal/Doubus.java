@@ -8,6 +8,7 @@ public class Doubus extends JPanel {
     Doubus(){
         this.setBounds(50,50,300,300);
         this.setBackground(Color.MAGENTA);
+        this.setLayout(null);
     }
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);

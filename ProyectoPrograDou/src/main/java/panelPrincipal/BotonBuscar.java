@@ -8,6 +8,7 @@ public class BotonBuscar extends JPanel{
 
     BotonBuscar(){
         this.setBounds(430,520,240,100);
+        this.setLayout(null);
         this.setBackground(Color.GREEN);
     }
 

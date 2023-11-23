@@ -15,7 +15,7 @@ public class Ventana extends JFrame{
         this.setVisible(true);
         this.setResizable(false);
         
-        PanelPrincipal pp = new PanelPrincipal();
+        PanelPrincipal pp = new PanelPrincipal(this);
         this.add(pp);
     }
 }
