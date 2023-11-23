@@ -4,9 +4,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class Publicidad extends JPanel {
-    Publicidad(){
-        this.setBounds(450,100,530,470);
+public class Destino extends JPanel{
+    Destino(){
+        this.setBounds(210,0,280,60);
         this.setBackground(Color.BLUE);
     }
 }

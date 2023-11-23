@@ -7,7 +7,6 @@ public class PanelPrincipal extends JPanel {
 	BotonIda bi;
 	BotonVuelta bv;
 	Doubus db;
-	Publicidad p;
 	
 	BotonDestinoIda bdi;
 	BotonDestinoVuelta bdv;
@@ -21,7 +20,6 @@ public class PanelPrincipal extends JPanel {
         bi = new BotonIda();
         bv = new BotonVuelta();
         db = new Doubus();
-        p = new Publicidad();
         
         bdi = new BotonDestinoIda();
         bdv = new BotonDestinoVuelta();
@@ -31,14 +29,15 @@ public class PanelPrincipal extends JPanel {
         this.add(bi);
         this.add(bv);
         this.add(db);
-        this.add(p);
+        botonesSi();
         
-        //this.add(bdi);
-        //this.add(bdv);
-        //this.add(bfi);
-        //this.add(bfv); 
     }
-
+    public void botonesSi() {
+        this.add(bdi);
+        this.add(bdv);
+        this.add(bfi);
+        this.add(bfv); 
+    }
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
