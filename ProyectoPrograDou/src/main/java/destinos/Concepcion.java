@@ -1,12 +1,12 @@
-package panelPrincipal;
+package destinos;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class Destino extends JPanel{
-    Destino(){
-        this.setBounds(210,0,280,60);
+public class Concepcion extends Destino{
+    public Concepcion(){
+    	super();
         this.setBackground(Color.BLUE);
     }
 }
