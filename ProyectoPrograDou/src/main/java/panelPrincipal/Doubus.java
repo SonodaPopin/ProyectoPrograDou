@@ -9,4 +9,11 @@ public class Doubus extends JPanel {
         this.setBounds(50,50,300,300);
         this.setBackground(Color.MAGENTA);
     }
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+
+        ImageIcon bus = new ImageIcon("doubuslogo.jpg");
+
+        g.drawImage(bus.getImage(), 0, 0, 300, 300, null);
+    }
 }
