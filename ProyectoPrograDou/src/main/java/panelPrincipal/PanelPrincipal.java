@@ -12,6 +12,7 @@ public class PanelPrincipal extends JPanel {
 	BotonDestinoVuelta bdv;
 	BotonFechaIda bfi;
 	BotonFechaVuelta bfv;
+	BotonBuscar bb;
     public PanelPrincipal() {
         this.setLayout(null);
         this.setBounds(0,0,1080,720);
@@ -25,6 +26,7 @@ public class PanelPrincipal extends JPanel {
         bdv = new BotonDestinoVuelta();
         bfi = new BotonFechaIda();
         bfv = new BotonFechaVuelta();
+        bb = new BotonBuscar();
         
         this.add(bi);
         this.add(bv);
@@ -37,6 +39,7 @@ public class PanelPrincipal extends JPanel {
         this.add(bdv);
         this.add(bfi);
         this.add(bfv); 
+        this.add(bb);
     }
     @Override
     protected void paintComponent(Graphics g) {
