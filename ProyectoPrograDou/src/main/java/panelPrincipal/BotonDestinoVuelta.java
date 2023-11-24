@@ -4,15 +4,14 @@ import javax.swing.*;
 import java.awt.*;
 
 import Ciudades.*;
+import main.EnumCiudades;
 
-public class BotonDestinoVuelta extends JPanel{
-	Ciudad d;
-	FlechaDerecha fd;
-	FlechaIzquierda fi;
+public class BotonDestinoVuelta extends BotonDestino{
     BotonDestinoVuelta(){
-    	d = new Valparaíso();
-    	fd = new FlechaDerecha();
-    	fi = new FlechaIzquierda();
+    	actual = 10;
+    	d = EnumCiudades.getCiudad(actual);
+    	fd = new FlechaDerecha(this);
+    	fi = new FlechaIzquierda(this);
         this.setBounds(430,150,550,60);
         this.setBackground(Color.LIGHT_GRAY);
         this.setLayout(null);

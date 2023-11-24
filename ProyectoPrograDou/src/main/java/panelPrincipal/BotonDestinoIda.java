@@ -1,18 +1,18 @@
 package panelPrincipal;
 
 import javax.swing.*;
+import main.SelectorCiudad;
 import java.awt.*;
 
 import Ciudades.*;
+import main.EnumCiudades;
 
-public class BotonDestinoIda extends JPanel{
-	Ciudad d;
-	FlechaDerecha fd;
-	FlechaIzquierda fi;
+public class BotonDestinoIda extends BotonDestino{
     BotonDestinoIda(){
-    	d = new Concepcion();
-    	fd = new FlechaDerecha();
-    	fi = new FlechaIzquierda();
+    	actual = 4;
+    	d = EnumCiudades.getCiudad(actual);
+    	fd = new FlechaDerecha(this);
+    	fi = new FlechaIzquierda(this);
         this.setBounds(430,50,550,60);
         this.setBackground(Color.LIGHT_GRAY);
         this.setLayout(null);
@@ -20,7 +20,6 @@ public class BotonDestinoIda extends JPanel{
         this.add(fd);
         this.add(fi);
     }
-
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);

@@ -5,7 +5,9 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class FlechaDerecha extends JPanel implements MouseListener{
-    FlechaDerecha(){
+	BotonDestino bd;
+    FlechaDerecha(BotonDestino bd){
+    	this.bd = bd;
         this.setBounds(150,0,60,60);
         this.setBackground(Color.RED);
         this.setLayout(null);
@@ -30,8 +32,12 @@ public class FlechaDerecha extends JPanel implements MouseListener{
 
 	@Override
 	public void mousePressed(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
+		if(bd.actual > 0) {
+		bd.Anterior();
+		}
+		if(bd.actual == 0) {
+			this.setBorder(BorderFactory.createEmptyBorder());
+		}
 	}
 
 	@Override
@@ -42,11 +48,15 @@ public class FlechaDerecha extends JPanel implements MouseListener{
 	
 	@Override
 	public void mouseEntered(MouseEvent e) {
+		if(bd.actual > 0) {
         this.setBorder(BorderFactory.createLineBorder(Color.YELLOW, 2));
+		}
 	}
 	
 	@Override
 	public void mouseExited(MouseEvent e) {
+		if(bd.actual > 0) {
 		this.setBorder(BorderFactory.createEmptyBorder());
+		}
 	}
 }
