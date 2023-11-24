@@ -12,12 +12,12 @@ public class PanelTickets extends JPanel {
 	Ticket t5;
 	Ticket t6;
     PanelTickets(){
-    	t1 = new Ticket(0,0);
-    	t2 = new Ticket(310,0);
-    	t3 = new Ticket(0,210);
-    	t4 = new Ticket(310,210);
-    	t5 = new Ticket(0,420);
-    	t6 = new Ticket(310,420);
+    	t1 = new Ticket(0,0,1);
+    	t2 = new Ticket(300,0,2);
+    	t3 = new Ticket(0,210,3);
+    	t4 = new Ticket(300,210,4);
+    	t5 = new Ticket(0,420,5);
+    	t6 = new Ticket(300,420,6);
         this.setBounds(430,50,550,570);
         this.setBackground(new Color(0, 0, 0, 0));
         this.setLayout(null);
@@ -28,4 +28,11 @@ public class PanelTickets extends JPanel {
         this.add(t5);
         this.add(t6);
     }
+
+	@Override
+	protected void paintComponent(Graphics g) {
+		super.paintComponent(g);
+
+
+	}
 }
