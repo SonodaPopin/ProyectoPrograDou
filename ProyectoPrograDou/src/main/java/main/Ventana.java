@@ -17,5 +17,8 @@ public class Ventana extends JFrame{
         
         PanelPrincipal pp = new PanelPrincipal(this);
         this.add(pp);
+
+        ImageIcon image = new ImageIcon("doubuslogodou.jpg");
+        this.setIconImage(image.getImage());
     }
 }

@@ -13,6 +13,16 @@ public class FlechaIzquierda extends JPanel implements MouseListener{
     }
 
 	@Override
+	protected void paintComponent(Graphics g) {
+		super.paintComponent(g);
+
+		g.setColor(Color.BLACK);
+		int[] xPoints = {20, 40,20};
+		int[] yPoints = {20, 30, 40};
+		g.fillPolygon(xPoints, yPoints, 3);
+	}
+
+	@Override
 	public void mouseClicked(MouseEvent e) {
 		// TODO Auto-generated method stub
 		

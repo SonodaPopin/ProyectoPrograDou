@@ -14,6 +14,16 @@ public class BotonBuscar extends JPanel implements MouseListener{
     }
 
 	@Override
+	protected void paintComponent(Graphics g) {
+		super.paintComponent(g);
+
+		g.setColor(Color.BLACK);
+		Font font = new Font("Arial", Font.BOLD, 30);
+		g.setFont(font);
+		g.drawString("Buscar", 65, 60);
+	}
+
+	@Override
 	public void mouseClicked(MouseEvent e) {
 		// TODO Auto-generated method stub
 		
