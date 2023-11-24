@@ -13,12 +13,12 @@ public class PanelTickets extends JPanel {
 	Ticket t6;
     PanelTickets(){
     	t1 = new Ticket(0,0);
-    	t2 = new Ticket(300,0);
-    	t3 = new Ticket(0,200);
-    	t4 = new Ticket(300,200);
-    	t5 = new Ticket(0,400);
-    	t6 = new Ticket(300,400);
-        this.setBounds(430,60,550,550);
+    	t2 = new Ticket(310,0);
+    	t3 = new Ticket(0,210);
+    	t4 = new Ticket(310,210);
+    	t5 = new Ticket(0,420);
+    	t6 = new Ticket(310,420);
+        this.setBounds(430,50,550,570);
         this.setBackground(new Color(0, 0, 0, 0));
         this.setLayout(null);
         this.add(t1);

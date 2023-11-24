@@ -17,6 +17,8 @@ public class PanelPrincipal extends JPanel {
 	BotonBuscar bb;
 	
 	PanelTickets pt;
+	BotonConfirmar bc;
+	BotonCancelar bcc;
     public PanelPrincipal(JFrame v) {
         this.setLayout(null);
         this.setBounds(0,0,1080,720);
@@ -35,6 +37,8 @@ public class PanelPrincipal extends JPanel {
         bb = new BotonBuscar(this);
         
         pt = new PanelTickets();
+        bc = new BotonConfirmar(this);
+        bcc = new BotonCancelar(this);
         
         this.add(bi);
         this.add(bv);
@@ -75,6 +79,8 @@ public class PanelPrincipal extends JPanel {
     	this.add(pt);
         this.remove(bi);
         this.remove(bv);
+        this.add(bc);
+        this.add(bcc);
         v.repaint();
     }
     @Override
