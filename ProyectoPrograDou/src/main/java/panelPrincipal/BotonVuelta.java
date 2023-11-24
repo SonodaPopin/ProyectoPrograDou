@@ -69,7 +69,6 @@ public class BotonVuelta extends JPanel implements MouseListener{
 		}
 		else if(pp.boton==2) {
 			pp.botonesNo();
-	        this.setBorder(BorderFactory.createLineBorder(Color.YELLOW, 2));
 			pp.boton = 0;
 		}
 	}

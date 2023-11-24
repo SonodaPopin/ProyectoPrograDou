@@ -5,8 +5,10 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class BotonBuscar extends JPanel implements MouseListener{
-Color VerdeOscuro = new Color(0,102,0);
-    BotonBuscar(){
+	PanelPrincipal pp;
+	Color VerdeOscuro = new Color(0,102,0);
+    BotonBuscar(PanelPrincipal pp){
+    	this.pp = pp;
         this.setBounds(430,520,240,100);
         this.setLayout(null);
         this.setBackground(VerdeOscuro);
@@ -31,8 +33,10 @@ Color VerdeOscuro = new Color(0,102,0);
 
 	@Override
 	public void mousePressed(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
+		pp.botonesNo();
+		pp.boton = 0;
+		this.setBorder(BorderFactory.createEmptyBorder());
+		pp.ticketsSi();
 	}
 
 	@Override

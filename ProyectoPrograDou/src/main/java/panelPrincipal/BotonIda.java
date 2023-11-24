@@ -63,7 +63,6 @@ public class BotonIda extends JPanel implements MouseListener{
 		}
 		else if(pp.boton==1) {
 			pp.botonesNo();
-	        this.setBorder(BorderFactory.createLineBorder(Color.YELLOW, 2));
 			pp.boton = 0;
 		}
 	}

@@ -15,6 +15,8 @@ public class PanelPrincipal extends JPanel {
 	BotonFechaIda bfi;
 	BotonFechaVuelta bfv;
 	BotonBuscar bb;
+	
+	PanelTickets pt;
     public PanelPrincipal(JFrame v) {
         this.setLayout(null);
         this.setBounds(0,0,1080,720);
@@ -30,7 +32,9 @@ public class PanelPrincipal extends JPanel {
         bdv = new BotonDestinoVuelta();
         bfi = new BotonFechaIda();
         bfv = new BotonFechaVuelta();
-        bb = new BotonBuscar();
+        bb = new BotonBuscar(this);
+        
+        pt = new PanelTickets();
         
         this.add(bi);
         this.add(bv);
@@ -63,6 +67,14 @@ public class PanelPrincipal extends JPanel {
         this.remove(bfi);
         this.remove(bb);
         this.remove(bfv); 
+		bi.setBorder(BorderFactory.createEmptyBorder());
+		bv.setBorder(BorderFactory.createEmptyBorder());
+        v.repaint();
+    }
+    public void ticketsSi() {
+    	this.add(pt);
+        this.remove(bi);
+        this.remove(bv);
         v.repaint();
     }
     @Override
