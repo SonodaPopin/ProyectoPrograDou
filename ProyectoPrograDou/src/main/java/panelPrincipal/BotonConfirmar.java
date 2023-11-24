@@ -20,7 +20,8 @@ public class BotonConfirmar extends JPanel implements MouseListener{
 	}
 	@Override
 	public void mousePressed(MouseEvent e) {
-		// TODO Auto-generated method stub
+		pp.ticketsNo();
+		this.setBorder(BorderFactory.createEmptyBorder());
 		
 	}
 	@Override
@@ -30,12 +31,11 @@ public class BotonConfirmar extends JPanel implements MouseListener{
 	}
 	@Override
 	public void mouseEntered(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
+        this.setBorder(BorderFactory.createLineBorder(Color.YELLOW, 2));
 	}
+	
 	@Override
 	public void mouseExited(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
+		this.setBorder(BorderFactory.createEmptyBorder());
 	}
 }

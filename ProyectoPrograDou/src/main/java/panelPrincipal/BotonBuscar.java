@@ -33,9 +33,9 @@ public class BotonBuscar extends JPanel implements MouseListener{
 
 	@Override
 	public void mousePressed(MouseEvent e) {
-		pp.botonesNo();
-		pp.boton = 0;
 		this.setBorder(BorderFactory.createEmptyBorder());
+		pp.botonesNo();
+		pp.inicioNo();
 		pp.ticketsSi();
 	}
 

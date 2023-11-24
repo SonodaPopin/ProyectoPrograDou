@@ -40,9 +40,8 @@ public class PanelPrincipal extends JPanel {
         bc = new BotonConfirmar(this);
         bcc = new BotonCancelar(this);
         
-        this.add(bi);
-        this.add(bv);
-        this.add(db);        
+        this.add(db); 
+        inicioSi();
     }
     public void botonesSi() {
         if (boton==1) {
@@ -77,11 +76,23 @@ public class PanelPrincipal extends JPanel {
     }
     public void ticketsSi() {
     	this.add(pt);
-        this.remove(bi);
-        this.remove(bv);
         this.add(bc);
         this.add(bcc);
         v.repaint();
+    }
+    public void ticketsNo() {
+    	this.remove(pt);
+        this.remove(bc);
+        this.remove(bcc);
+        v.repaint();
+    }
+    public void inicioSi() {
+        this.add(bi);
+        this.add(bv);
+    }
+    public void inicioNo() {
+        this.remove(bi);
+        this.remove(bv);
     }
     @Override
     protected void paintComponent(Graphics g) {
