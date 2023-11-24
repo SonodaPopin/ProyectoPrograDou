@@ -6,20 +6,30 @@ import java.awt.event.*;
 
 public class Ticket extends JPanel {
     private int tipo;
+    private String hora;
     Font font15 = new Font("Arial", Font.BOLD, 15);
     Font font20 = new Font("Arial", Font.BOLD, 20);
     Color AzulClaro = new Color(51,153,255);
 
-    Ticket(int a, int b, int tipo){
+    Ticket(int a, int b, int tipo, String hora){
         this.tipo = tipo;
+        this.hora = hora;
         this.setBounds(a,b,250,150);
         this.setBackground(Color.RED);
         this.setLayout(null);
+    }
+    public String getHora(){
+        return hora;
     }
 
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
+
+        g.setColor(Color.WHITE);
+        g.setFont(font15);
+        g.drawString(getHora(),205,135);
+
 
         g.setColor(Color.WHITE);
         g.setFont(font15);
@@ -51,9 +61,6 @@ public class Ticket extends JPanel {
                 g.drawString("Semi", 160, 70);
                 g.drawString("Cama", 160, 90);
 
-                g.setFont(font15);
-                g.drawString("20:00",205,135);
-
                 break;
             case 2:
                 g.setColor(Color.LIGHT_GRAY);
@@ -82,8 +89,6 @@ public class Ticket extends JPanel {
                 g.drawString("Salon", 160, 70);
                 g.drawString("Cama", 160, 90);
 
-                g.setFont(font15);
-                g.drawString("15:30",205,135);
                 break;
 
             default:
@@ -91,3 +96,4 @@ public class Ticket extends JPanel {
         }
     }
 }
+
