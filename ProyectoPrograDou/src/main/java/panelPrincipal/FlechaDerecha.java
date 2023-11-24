@@ -17,8 +17,8 @@ public class FlechaDerecha extends JPanel implements MouseListener{
 		super.paintComponent(g);
 
 		g.setColor(Color.BLACK);
-		int[] xPoints = {40, 20,40};
-		int[] yPoints = {20, 30, 40};
+		int[] xPoints = {45, 15, 45};
+		int[] yPoints = {15, 30, 45};
 		g.fillPolygon(xPoints, yPoints, 3);
 	}
 

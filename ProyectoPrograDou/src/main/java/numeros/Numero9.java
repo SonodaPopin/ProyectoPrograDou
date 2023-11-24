@@ -1,13 +1,10 @@
 package numeros;
 
-import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
 
-public class Numero22 extends Numero{
-    public Numero22(){
-    	super();
-
+public class Numero9 extends Numero{
+    public Numero9(){
+        super();
     }
 
     @Override
@@ -17,6 +14,6 @@ public class Numero22 extends Numero{
         g.setColor(Color.WHITE);
         Font font = new Font("Arial", Font.BOLD, 40);
         g.setFont(font);
-        g.drawString("22", 15, 60);
+        g.drawString("9", 30, 60);
     }
 }

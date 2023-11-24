@@ -12,7 +12,7 @@ public class Dia extends JPanel{
     Dia(){
     	fa = new FlechaArriba();
     	faa = new FlechaAbajo();
-    	n = new Numero1();
+    	n = new Numero24();
         this.setBounds(0,70,80,130);
         this.setLayout(null);
         this.add(fa);

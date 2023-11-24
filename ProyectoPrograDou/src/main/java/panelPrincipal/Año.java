@@ -12,7 +12,7 @@ public class Año extends JPanel{
     Año(){
     	fa = new FlechaArriba();
     	faa = new FlechaAbajo();
-    	n = new Numero22();
+    	n = new Numero23();
         this.setBounds(160,70,80,130);
         this.setLayout(null);
         this.add(fa);
