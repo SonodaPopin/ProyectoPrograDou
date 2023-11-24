@@ -1,13 +1,10 @@
-package destinos;
+package Ciudades;
 
-import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
 
-public class Concepcion extends Destino{
-    public Concepcion(){
-    	super();
-        this.setBackground(Color.BLUE);
+public class PuertoMontt extends Ciudad{
+    public PuertoMontt(){
+        super();
     }
 
     @Override
@@ -17,6 +14,6 @@ public class Concepcion extends Destino{
         g.setColor(Color.white);
         Font font = new Font("Arial", Font.BOLD, 25);
         g.setFont(font);
-        g.drawString("Concepción", 70, 40);
+        g.drawString("Puerto Montt", 65, 40);
     }
 }

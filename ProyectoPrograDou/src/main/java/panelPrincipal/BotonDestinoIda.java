@@ -2,11 +2,11 @@ package panelPrincipal;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
-import destinos.*;
+
+import Ciudades.*;
 
 public class BotonDestinoIda extends JPanel{
-	Destino d;
+	Ciudad d;
 	FlechaDerecha fd;
 	FlechaIzquierda fi;
     BotonDestinoIda(){

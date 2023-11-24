@@ -5,11 +5,11 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class BotonBuscar extends JPanel implements MouseListener{
-
+Color VerdeOscuro = new Color(0,102,0);
     BotonBuscar(){
         this.setBounds(430,520,240,100);
         this.setLayout(null);
-        this.setBackground(Color.GREEN);
+        this.setBackground(VerdeOscuro);
         this.addMouseListener(this);
     }
 
@@ -17,7 +17,7 @@ public class BotonBuscar extends JPanel implements MouseListener{
 	protected void paintComponent(Graphics g) {
 		super.paintComponent(g);
 
-		g.setColor(Color.BLACK);
+		g.setColor(Color.WHITE);
 		Font font = new Font("Arial", Font.BOLD, 30);
 		g.setFont(font);
 		g.drawString("Buscar", 65, 60);

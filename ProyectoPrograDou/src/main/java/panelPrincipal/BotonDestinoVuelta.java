@@ -2,15 +2,15 @@ package panelPrincipal;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
-import destinos.*;
+
+import Ciudades.*;
 
 public class BotonDestinoVuelta extends JPanel{
-	Destino d;
+	Ciudad d;
 	FlechaDerecha fd;
 	FlechaIzquierda fi;
     BotonDestinoVuelta(){
-    	d = new Santiago();
+    	d = new Valparaíso();
     	fd = new FlechaDerecha();
     	fi = new FlechaIzquierda();
         this.setBounds(430,150,550,60);

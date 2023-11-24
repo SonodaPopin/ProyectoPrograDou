@@ -1,13 +1,10 @@
-package destinos;
+package Ciudades;
 
-import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
 
-public class Santiago extends Destino{
-    public Santiago(){
-    	super();
-        this.setBackground(Color.BLACK);
+public class Chillán extends Ciudad{
+    public Chillán(){
+        super();
     }
 
     @Override
@@ -17,6 +14,6 @@ public class Santiago extends Destino{
         g.setColor(Color.white);
         Font font = new Font("Arial", Font.BOLD, 25);
         g.setFont(font);
-        g.drawString("Santiago", 95, 40);
+        g.drawString("Chillán", 100, 40);
     }
 }
