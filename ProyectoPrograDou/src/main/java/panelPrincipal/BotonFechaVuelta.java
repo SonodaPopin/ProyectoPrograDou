@@ -30,4 +30,3 @@ public class BotonFechaVuelta extends JPanel{
         g.drawString("Fecha Vuelta", 45, 45);
     }
 }
-

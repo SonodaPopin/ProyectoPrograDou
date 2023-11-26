@@ -1,6 +1,4 @@
-package main;
-
-import Ciudades.*;
+package Ciudades;
 
 public enum EnumCiudades {
     ANTOFAGASTA(new Antofagasta()),

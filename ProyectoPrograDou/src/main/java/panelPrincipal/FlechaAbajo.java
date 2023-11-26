@@ -5,7 +5,9 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class FlechaAbajo extends JPanel implements MouseListener{
-    FlechaAbajo(){
+	Fechas f;
+    FlechaAbajo(Fechas f){
+    	this.f = f;
         this.setBounds(0,110,80,20);
         this.setBackground(Color.RED);
         this.setLayout(null);
@@ -29,8 +31,12 @@ public class FlechaAbajo extends JPanel implements MouseListener{
 
 	@Override
 	public void mousePressed(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
+		if(f.limit != -1) {
+			f.Anterior();
+		}
+		if(f.limit == -1) {
+			this.setBorder(BorderFactory.createEmptyBorder());
+		}
 	}
 
 	@Override
@@ -41,11 +47,15 @@ public class FlechaAbajo extends JPanel implements MouseListener{
 	
 	@Override
 	public void mouseEntered(MouseEvent e) {
+		if(f.limit != -1) {
         this.setBorder(BorderFactory.createLineBorder(Color.YELLOW, 2));
+		}
 	}
 	
 	@Override
 	public void mouseExited(MouseEvent e) {
+		if(f.limit != -1) {
 		this.setBorder(BorderFactory.createEmptyBorder());
+		}
 	}
 }

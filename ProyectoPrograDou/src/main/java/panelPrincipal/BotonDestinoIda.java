@@ -1,11 +1,8 @@
 package panelPrincipal;
 
 import javax.swing.*;
-import main.SelectorCiudad;
 import java.awt.*;
-
 import Ciudades.*;
-import main.EnumCiudades;
 
 public class BotonDestinoIda extends BotonDestino{
     BotonDestinoIda(){

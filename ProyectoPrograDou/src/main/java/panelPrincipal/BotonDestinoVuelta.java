@@ -4,7 +4,6 @@ import javax.swing.*;
 import java.awt.*;
 
 import Ciudades.*;
-import main.EnumCiudades;
 
 public class BotonDestinoVuelta extends BotonDestino{
     BotonDestinoVuelta(){
