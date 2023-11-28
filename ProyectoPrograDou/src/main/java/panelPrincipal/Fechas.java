@@ -18,4 +18,7 @@ public abstract class Fechas extends JPanel{
 	}
 	public void Anterior() {
 	}
+	public int getActual() {
+		return actual;
+	}
 }

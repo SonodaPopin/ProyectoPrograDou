@@ -8,7 +8,7 @@ import numeros.*;
 public class Año extends Fechas{
     Año(){
     	if (actual == 0) {
-    		actual = 22;
+    		actual = 23;
     	}
     	limit = -1;
     	fa = new FlechaArriba(this);
@@ -21,7 +21,7 @@ public class Año extends Fechas{
         this.add(n);
     }
 	public void Siguiente() {
-		if(actual == 22) {
+		if(actual == 23) {
 			actual++;
 			limit = 1;
 			this.remove(n);
@@ -31,7 +31,7 @@ public class Año extends Fechas{
 		}
 	}
 	public void Anterior() {
-		if(actual == 23) {
+		if(actual == 24) {
 			actual--;
 			limit = -1;
 			this.remove(n);

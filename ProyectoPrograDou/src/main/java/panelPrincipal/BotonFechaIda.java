@@ -19,6 +19,10 @@ public class BotonFechaIda extends JPanel{
         this.add(m);
         this.add(a);
     }
+    public int[] getFecha() {
+    	int[] fecha = {d.getActual(),m.getActual(),a.getActual()};
+    	return fecha;
+    }
 
     @Override
     protected void paintComponent(Graphics g) {
