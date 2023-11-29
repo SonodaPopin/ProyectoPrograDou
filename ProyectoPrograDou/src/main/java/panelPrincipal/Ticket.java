@@ -4,7 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class Ticket extends JPanel {
+public class Ticket extends JPanel implements MouseListener{
+	PanelTickets pt;
     private int pisos;
     private int tipo;
     private String hora;
@@ -12,13 +13,15 @@ public class Ticket extends JPanel {
     Font font20 = new Font("Arial", Font.BOLD, 20);
     Color AzulClaro = new Color(51,153,255);
 
-    public Ticket(int a, int b, int pisos, int tipo, String hora){
+    public Ticket(PanelTickets pt, int a, int b, int pisos, int tipo, String hora){
+    	this.pt = pt;
         this.pisos = pisos;
         this.hora = hora;
         this.tipo = tipo;
         this.setBounds(a,b,250,150);
         this.setBackground(Color.RED);
         this.setLayout(null);
+        this.addMouseListener(this);
     }
     public String getHora(){
         return hora;
@@ -104,5 +107,31 @@ public class Ticket extends JPanel {
                 break;
         }
     }
+	@Override
+	public void mouseClicked(MouseEvent e) {
+
+		
+	}
+	@Override
+	public void mousePressed(MouseEvent e) {
+		pt.seleccionar(this);
+	}
+	@Override
+	public void mouseReleased(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void mouseEntered(MouseEvent e) {
+		if(pt.seleccionado!=this) {
+			this.setBorder(BorderFactory.createLineBorder(Color.YELLOW, 2));
+		}
+	}
+	@Override
+	public void mouseExited(MouseEvent e) {
+		if(pt.seleccionado!=this) {
+			this.setBorder(BorderFactory.createEmptyBorder());
+		}
+	}
 }
 

@@ -7,6 +7,7 @@ import java.awt.event.*;
 
 public class PanelTickets extends JPanel {
 	Random random;
+	Ticket seleccionado = null;
 	Ticket t1;
 	Ticket t2;
 	Ticket t3;
@@ -43,8 +44,15 @@ public class PanelTickets extends JPanel {
 		else {
 			hora = "0"+e+":"+g+"0";
 		}
-		Ticket ticket = new Ticket(a,b,c,d,hora);
+		Ticket ticket = new Ticket(this,a,b,c,d,hora);
 		return ticket;
+	}
+	public void seleccionar(Ticket seleccionado){
+		if (this.seleccionado != null){
+			this.seleccionado.setBorder(BorderFactory.createEmptyBorder());
+		}
+		this.seleccionado = seleccionado;
+		seleccionado.setBorder(BorderFactory.createLineBorder(Color.GREEN, 2));
 	}
 
 	@Override
