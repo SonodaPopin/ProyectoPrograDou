@@ -12,7 +12,7 @@ public class Ticket extends JPanel {
     Font font20 = new Font("Arial", Font.BOLD, 20);
     Color AzulClaro = new Color(51,153,255);
 
-    Ticket(int a, int b, int pisos, int tipo, String hora){
+    public Ticket(int a, int b, int pisos, int tipo, String hora){
         this.pisos = pisos;
         this.hora = hora;
         this.tipo = tipo;
