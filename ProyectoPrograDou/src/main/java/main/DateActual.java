@@ -26,7 +26,7 @@ public class DateActual {
 		}
 	}
 	public int comprobarFechaVuelta(int d1, int m1, int a1, int d2, int m2, int a2) {
-		if(a2<a1||(a2==a1&&m2<m1)||(a2==a1&&m2==m1&&d2<d1)) {
+		if (a2 < a1 || (a2 == a1 && m2 < m1) || (a2 == a1 && m2 == m1 && d2 < d1)) {
 			return -1;
 		}
 		else {
