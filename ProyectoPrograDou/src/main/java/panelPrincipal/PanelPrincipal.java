@@ -38,8 +38,8 @@ public class PanelPrincipal extends JPanel {
         bfv = new BotonFechaVuelta();
         bb = new BotonBuscar(this);
         
-        pt1 = new PanelTickets("hola");
-        pt2 = new PanelTickets("chao");
+        pt1 = new PanelTickets(1);
+        pt2 = new PanelTickets(2);
         bc = new BotonConfirmar(this);
         bcc = new BotonCancelar(this);
         
@@ -79,8 +79,8 @@ public class PanelPrincipal extends JPanel {
     }
     public void ticketsSi() {
     	if (destructor == 0) {
-    		pt1 = new PanelTickets("Pasaje ida");  
-    		pt2 = new PanelTickets("Pasaje vuelta");
+    		pt1 = new PanelTickets(1);
+    		pt2 = new PanelTickets(2);
     		this.add(pt1);
     		this.add(bc);
     		this.add(bcc);
