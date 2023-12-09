@@ -5,8 +5,10 @@ import javax.swing.*;
 import panelPrincipal.PanelPrincipal;
 
 public class Ventana extends JFrame{
+	int boton;
 	PanelPrincipal pp;
-	Pasaje[] pa;
+	Pasaje pa1;
+	Pasaje pa2;
     public Ventana() {
         super();
 
@@ -23,7 +25,16 @@ public class Ventana extends JFrame{
         ImageIcon image = new ImageIcon("doubuslogodou.jpg");
         this.setIconImage(image.getImage());
     }
-    public void Parte2() {
+    public void Parte2(int boton) {
+    	this.boton = boton;
+    	if (boton == 1) { 
+    		pa1 = pp.crearPasaje(1);
+    	}
+    	else {
+    		pa1 = pp.crearPasaje(1);
+    		pa2 = pp.crearPasaje(2);
+    	}  	
     	this.remove(pp);
+    	this.repaint();
     }
 }

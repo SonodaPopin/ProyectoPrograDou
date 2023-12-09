@@ -2,12 +2,12 @@ package panelPrincipal;
 
 import javax.swing.*;
 import java.awt.*;
-import main.Pasaje;
+import main.*;
 
 public class PanelPrincipal extends JPanel {
 	int boton;
 	int destructor = 0;
-	JFrame v;
+	Ventana v;
 	BotonIda bi;
 	BotonVuelta bv;
 	Doubus db;
@@ -21,7 +21,7 @@ public class PanelPrincipal extends JPanel {
 	PanelTickets pt1, pt2;
 	BotonConfirmar bc;
 	BotonCancelar bcc;
-    public PanelPrincipal(JFrame v) {
+    public PanelPrincipal(Ventana v) {
         this.setLayout(null);
         this.setBounds(0,0,1080,720);
         this.setBackground(Color.DARK_GRAY);
@@ -122,6 +122,9 @@ public class PanelPrincipal extends JPanel {
     		Pasaje pasaje = new Pasaje(bdv.getDestino(), bdi.getDestino(), pt2, bfv);
     		return pasaje;
     	}
+    }
+    public void Order66(){
+    	v.Parte2(boton);
     }
     @Override
     protected void paintComponent(Graphics g) {
