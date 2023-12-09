@@ -4,10 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class BotonFechaVuelta extends JPanel{
-	Dia d;
-	Mes m;
-	Año a;
+public class BotonFechaVuelta extends BotonFecha{
     BotonFechaVuelta(){
     	d = new Dia();
     	m = new Mes();
@@ -19,11 +16,6 @@ public class BotonFechaVuelta extends JPanel{
         this.add(m);
         this.add(a);
     }
-    public int[] getFecha() {
-    	int[] fecha = {d.getActual(),m.getActual(),a.getActual()};
-    	return fecha;
-    }
-
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);

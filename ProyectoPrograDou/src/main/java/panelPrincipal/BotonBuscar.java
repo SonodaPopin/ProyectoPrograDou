@@ -41,7 +41,7 @@ public class BotonBuscar extends JPanel implements MouseListener{
 				this.setBorder(BorderFactory.createEmptyBorder());
 				pp.botonesNo();
 				pp.inicioNo();
-				pp.ticketsSi();
+				pp.ticketsSi(0);
 			} else {
 				JOptionPane.showMessageDialog(this, "Fecha de vuelta invalida.", "Advertencia", JOptionPane.WARNING_MESSAGE);
 			}

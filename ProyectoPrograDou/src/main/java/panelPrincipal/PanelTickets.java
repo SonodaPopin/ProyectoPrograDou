@@ -14,12 +14,12 @@ public class PanelTickets extends JPanel {
 	Ticket t4;
 	Ticket t5;
 	Ticket t6;
-    PanelTickets(){
+    PanelTickets(String h){
     	random = new Random();
-    	t1 = createTicket(0,0);
-    	t2 = createTicket(300,0);
-    	t3 = createTicket(0,210);
-    	t4 = createTicket(300,210);
+    	t1 = createTicket(0,80);
+    	t2 = createTicket(300,80);
+    	t3 = createTicket(0,250);
+    	t4 = createTicket(300,250);
     	t5 = createTicket(0,420);
     	t6 = createTicket(300,420);
         this.setBounds(430,50,550,570);

@@ -2,6 +2,7 @@ package panelPrincipal;
 
 import javax.swing.*;
 import java.awt.*;
+import main.Pasaje;
 
 public class PanelPrincipal extends JPanel {
 	int boton;
@@ -16,7 +17,7 @@ public class PanelPrincipal extends JPanel {
 	BotonFechaVuelta bfv;
 	BotonBuscar bb;
 	
-	PanelTickets pt;
+	PanelTickets pt1, pt2;
 	BotonConfirmar bc;
 	BotonCancelar bcc;
     public PanelPrincipal(JFrame v) {
@@ -36,7 +37,8 @@ public class PanelPrincipal extends JPanel {
         bfv = new BotonFechaVuelta();
         bb = new BotonBuscar(this);
         
-        pt = new PanelTickets();
+        pt1 = new PanelTickets("hola");
+        pt2 = new PanelTickets("chao");
         bc = new BotonConfirmar(this);
         bcc = new BotonCancelar(this);
         
@@ -74,14 +76,29 @@ public class PanelPrincipal extends JPanel {
 		bv.setBorder(BorderFactory.createEmptyBorder());
         v.repaint();
     }
-    public void ticketsSi() {
-    	this.add(pt);
-        this.add(bc);
-        this.add(bcc);
-        v.repaint();
+    public void ticketsSi(int a) {
+    	if (a == 0) {
+    		if (boton == 1){
+    			pt1 = new PanelTickets("Pasaje ida");   		
+    			this.add(pt1);
+    		}
+    		else if(boton == 2) {
+    			pt1 = new PanelTickets("Pasaje ida");  
+    			pt2 = new PanelTickets("Pasaje vuelta");
+    			this.add(pt1);
+    		}
+    		this.add(bc);
+    		this.add(bcc);
+    	}
+    	else {
+    		this.remove(pt1);
+    		this.add(pt2);
+    	}
+		v.repaint();
     }
     public void ticketsNo() {
-    	this.remove(pt);
+    	this.remove(pt1);
+    	this.remove(pt2);
         this.remove(bc);
         this.remove(bcc);
         v.repaint();
@@ -93,6 +110,9 @@ public class PanelPrincipal extends JPanel {
     public void inicioNo() {
         this.remove(bi);
         this.remove(bv);
+    }
+    public void crearPasaje() {
+    	//Pasaje pasaje = new Pasaje(pt);
     }
     @Override
     protected void paintComponent(Graphics g) {

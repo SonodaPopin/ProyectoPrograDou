@@ -26,6 +26,12 @@ public class Ticket extends JPanel implements MouseListener{
     public String getHora(){
         return hora;
     }
+    public int getPisos() {
+    	return pisos;
+    }
+    public int getTipo() {
+    	return tipo;
+    }
 
     @Override
     protected void paintComponent(Graphics g) {
