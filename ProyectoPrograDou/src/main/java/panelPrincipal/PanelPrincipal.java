@@ -6,6 +6,7 @@ import main.Pasaje;
 
 public class PanelPrincipal extends JPanel {
 	int boton;
+	int destructor = 0;
 	JFrame v;
 	BotonIda bi;
 	BotonVuelta bv;
@@ -76,23 +77,24 @@ public class PanelPrincipal extends JPanel {
 		bv.setBorder(BorderFactory.createEmptyBorder());
         v.repaint();
     }
-    public void ticketsSi(int a) {
-    	if (a == 0) {
-    		if (boton == 1){
-    			pt1 = new PanelTickets("Pasaje ida");   		
-    			this.add(pt1);
-    		}
-    		else if(boton == 2) {
-    			pt1 = new PanelTickets("Pasaje ida");  
-    			pt2 = new PanelTickets("Pasaje vuelta");
-    			this.add(pt1);
-    		}
+    public void ticketsSi() {
+    	if (destructor == 0) {
+    		pt1 = new PanelTickets("Pasaje ida");  
+    		pt2 = new PanelTickets("Pasaje vuelta");
+    		this.add(pt1);
     		this.add(bc);
     		this.add(bcc);
+    		destructor++;
     	}
-    	else {
+    	else if (destructor == 1){
     		this.remove(pt1);
     		this.add(pt2);
+    		destructor++;
+    	}
+    	else {
+    		this.remove(pt2);
+    		this.add(pt1);
+    		destructor--;
     	}
 		v.repaint();
     }
@@ -111,8 +113,15 @@ public class PanelPrincipal extends JPanel {
         this.remove(bi);
         this.remove(bv);
     }
-    public void crearPasaje() {
-    	//Pasaje pasaje = new Pasaje(pt);
+    public Pasaje crearPasaje(int a) {
+    	if (a == 1) {
+    		Pasaje pasaje = new Pasaje(bdi.getDestino(), bdv.getDestino(), pt1, bfi);
+    		return pasaje;
+    	}
+    	else {
+    		Pasaje pasaje = new Pasaje(bdv.getDestino(), bdi.getDestino(), pt2, bfv);
+    		return pasaje;
+    	}
     }
     @Override
     protected void paintComponent(Graphics g) {

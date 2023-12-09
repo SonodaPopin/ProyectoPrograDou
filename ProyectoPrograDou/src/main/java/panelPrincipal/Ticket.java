@@ -29,8 +29,13 @@ public class Ticket extends JPanel implements MouseListener{
     public int getPisos() {
     	return pisos;
     }
-    public int getTipo() {
-    	return tipo;
+    public String getTipo() {
+    	if (tipo == 1) {
+    		return "Semi cama";
+    	}
+    	else {
+    		return "Salón cama";
+    	}
     }
 
     @Override

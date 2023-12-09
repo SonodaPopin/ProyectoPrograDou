@@ -32,11 +32,16 @@ public class BotonCancelar extends JPanel implements MouseListener{
 	}
 	@Override
 	public void mousePressed(MouseEvent e) {
-		this.setBorder(BorderFactory.createEmptyBorder());
-		pp.ticketsNo();
-		pp.inicioSi();
-		pp.botonesSi();
-		
+		if(pp.destructor == 1) {
+			this.setBorder(BorderFactory.createEmptyBorder());
+			pp.ticketsNo();
+			pp.inicioSi();
+			pp.botonesSi();
+			pp.destructor--;
+		}
+		else{
+			pp.ticketsSi();
+		}		
 	}
 	@Override
 	public void mouseReleased(MouseEvent e) {

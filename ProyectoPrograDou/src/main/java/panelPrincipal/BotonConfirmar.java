@@ -32,14 +32,21 @@ public class BotonConfirmar extends JPanel implements MouseListener{
 	}
 	@Override
 	public void mousePressed(MouseEvent e) {
-		if(pp.boton == 1) {
+		if
+		if(pp.boton == 2 && pp.destructor == 1) {
+			pp.ticketsSi();
+		}
+		else if(pp.boton == 1){
+			pp.crearPasaje(1);
 			pp.ticketsNo();
+			this.setBorder(BorderFactory.createEmptyBorder());
 		}
 		else if(pp.boton == 2) {
-			pp.ticketsSi(1);
-		}
-		this.setBorder(BorderFactory.createEmptyBorder());
-		
+			pp.crearPasaje(1);
+			pp.crearPasaje(2);
+			pp.ticketsNo();
+			this.setBorder(BorderFactory.createEmptyBorder());
+		}		
 	}
 	@Override
 	public void mouseReleased(MouseEvent e) {

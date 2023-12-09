@@ -14,7 +14,9 @@ public class PanelTickets extends JPanel {
 	Ticket t4;
 	Ticket t5;
 	Ticket t6;
-    PanelTickets(String h){
+	String mensaje;
+    PanelTickets(String mensaje){
+    	this.mensaje = mensaje;
     	random = new Random();
     	t1 = createTicket(0,80);
     	t2 = createTicket(300,80);
@@ -53,6 +55,9 @@ public class PanelTickets extends JPanel {
 		}
 		this.seleccionado = seleccionado;
 		seleccionado.setBorder(BorderFactory.createLineBorder(Color.GREEN, 2));
+	}
+	public Ticket getSeleccionado() {
+		return seleccionado;
 	}
 
 	@Override
