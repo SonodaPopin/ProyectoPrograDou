@@ -14,7 +14,10 @@ public class PanelTickets extends JPanel {
 	Ticket t4;
 	Ticket t5;
 	Ticket t6;
-    PanelTickets(String h){
+	String mensaje;
+	Font font30 = new Font("Arial", Font.BOLD, 30);
+    PanelTickets(String mensaje){
+		this.mensaje = mensaje;
     	random = new Random();
     	t1 = createTicket(0,80);
     	t2 = createTicket(300,80);
@@ -54,11 +57,18 @@ public class PanelTickets extends JPanel {
 		this.seleccionado = seleccionado;
 		seleccionado.setBorder(BorderFactory.createLineBorder(Color.GREEN, 2));
 	}
-
+	public String getMensaje(){
+		return mensaje;
+	}
 	@Override
 	protected void paintComponent(Graphics g) {
 		super.paintComponent(g);
 
+		g.setColor(Color.BLACK);
+		g.fillRect(160,15,220,45);
 
+		g.setColor(Color.WHITE);
+		g.setFont(font30);
+		g.drawString(getMensaje(),170,45);
 	}
 }

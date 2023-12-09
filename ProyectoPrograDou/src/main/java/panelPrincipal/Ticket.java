@@ -9,9 +9,9 @@ public class Ticket extends JPanel implements MouseListener{
     private int pisos;
     private int tipo;
     private String hora;
-    Font font15 = new Font("Arial", Font.BOLD, 15);
-    Font font20 = new Font("Arial", Font.BOLD, 20);
-    Color AzulClaro = new Color(51,153,255);
+    private Font font15 = new Font("Arial", Font.BOLD, 15);
+    private Font font20 = new Font("Arial", Font.BOLD, 20);
+    private Color AzulClaro = new Color(51,153,255);
 
     public Ticket(PanelTickets pt, int a, int b, int pisos, int tipo, String hora){
     	this.pt = pt;
