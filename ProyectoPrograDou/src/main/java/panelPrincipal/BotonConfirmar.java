@@ -32,7 +32,6 @@ public class BotonConfirmar extends JPanel implements MouseListener{
 	}
 	@Override
 	public void mousePressed(MouseEvent e) {
-		if
 		if(pp.boton == 2 && pp.destructor == 1) {
 			pp.ticketsSi();
 		}
