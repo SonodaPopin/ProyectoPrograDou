@@ -5,6 +5,9 @@ import java.util.Random;
 import java.awt.*;
 import java.awt.event.*;
 
+/**
+ * Clase que representa un panel sobre el que se muestran los tickets
+ */
 public class PanelTickets extends JPanel {
 	Random random;
 	Ticket seleccionado = null;
@@ -16,6 +19,10 @@ public class PanelTickets extends JPanel {
 	Ticket t6;
 	private int mensaje;
 	Font font30 = new Font("Arial", Font.BOLD, 30);
+    /**
+     * Método que crea el panel
+     * @param mensaje - numero que decide entre dos opciones que mensaje se mostrará en el panel
+     */
     public PanelTickets(int mensaje){
 		this.mensaje = mensaje;
     	random = new Random();
@@ -35,6 +42,12 @@ public class PanelTickets extends JPanel {
         this.add(t5);
         this.add(t6);
     }
+	/**
+	 * Método que crea un ticket aleatorio
+	 * @param a - coordenada x
+	 * @param b - coordenada y
+	 * @return - el ticket
+	 */
 	public Ticket createTicket(int a, int b){
 		String hora;
 		int c = random.nextInt(2)+1;
@@ -50,6 +63,10 @@ public class PanelTickets extends JPanel {
 		Ticket ticket = new Ticket(this,a,b,c,d,hora);
 		return ticket;
 	}
+	/**
+	 * Método que establece el ticket seleccionado por el usuario
+	 * @param seleccionado - ticket seleccionado
+	 */
 	public void seleccionar(Ticket seleccionado){
 		if (this.seleccionado != null){
 			this.seleccionado.setBorder(BorderFactory.createEmptyBorder());
@@ -57,6 +74,10 @@ public class PanelTickets extends JPanel {
 		this.seleccionado = seleccionado;
 		seleccionado.setBorder(BorderFactory.createLineBorder(Color.GREEN, 2));
 	}
+	/**
+	 * Método que entrega el ticket seleccionado por el usuario
+	 * @return - ticket seleccionado
+	 */
 	public Ticket getSeleccionado() {
 		return seleccionado;
 	}

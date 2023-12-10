@@ -4,9 +4,16 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
+/**
+ * Clase que representa un botón para confirmar el ticket seleccionado
+ */
 public class BotonConfirmar extends JPanel implements MouseListener{
 	PanelPrincipal pp;
 	Color VerdeOscuro = new Color(0,102,0);
+    /**
+     * Método constructor del panel
+     * @param pp - panel sobre el que se muestra
+     */
     public BotonConfirmar(PanelPrincipal pp){
     	this.pp = pp;
         this.setBounds(50,400,300,100);

@@ -5,7 +5,13 @@ import java.awt.*;
 
 import Ciudades.*;
 
+/**
+ * Clase que representa un panel para elegir la ciudad de destino del viaje
+ */
 public class BotonDestinoVuelta extends BotonDestino{
+    /**
+     * Método constructor del panel
+     */
     public BotonDestinoVuelta(){
     	setActual(10);
     	d = EnumCiudades.getCiudad(getActual());

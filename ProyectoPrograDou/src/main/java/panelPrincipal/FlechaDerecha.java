@@ -4,8 +4,15 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
+/**
+ *  * Clase que representa un panel con una flecha hacia la derecha
+ */
 public class FlechaDerecha extends JPanel implements MouseListener{
 	BotonDestino bd;
+    /**
+     * Método constructor que crea el panel
+     * @param f - panel sobre el que se muestra la flecha
+     */
     public FlechaDerecha(BotonDestino bd){
     	this.bd = bd;
         this.setBounds(150,0,60,60);

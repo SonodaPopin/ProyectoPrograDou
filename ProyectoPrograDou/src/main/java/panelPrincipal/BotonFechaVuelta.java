@@ -4,7 +4,13 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
+/**
+ * Clase que representa un panel para elegir la fecha del viaje de vuelta
+ */
 public class BotonFechaVuelta extends BotonFecha{
+    /**
+     * Método constructor del panel
+     */
     public BotonFechaVuelta(){
     	d = new Dia();
     	m = new Mes();

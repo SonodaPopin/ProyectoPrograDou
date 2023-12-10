@@ -4,8 +4,15 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
+/**
+ * Clase que representa un boton para comprar pasajes de ida y vuelta
+ */
 public class BotonVuelta extends JPanel implements MouseListener{
 	PanelPrincipal pp;
+    /**
+     * Método que crea el boton
+     * @param pp - panel sobre el que se muestra el boton
+     */
     public BotonVuelta(PanelPrincipal pp){
     	this.pp = pp;
         this.setBounds(50,520,300,100);

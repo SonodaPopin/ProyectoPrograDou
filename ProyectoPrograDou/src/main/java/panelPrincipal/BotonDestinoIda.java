@@ -4,7 +4,13 @@ import javax.swing.*;
 import java.awt.*;
 import Ciudades.*;
 
+/**
+ * Clase que representa un panel para elegir la ciudad de partida del viaje
+ */
 public class BotonDestinoIda extends BotonDestino{
+    /**
+     * Método constructor del panel
+     */
     public BotonDestinoIda(){
     	actual = 4;
     	d = EnumCiudades.getCiudad(actual);
