@@ -9,9 +9,9 @@ import java.awt.event.*;
 
 public class Asiento extends JPanel implements MouseListener{
 	PanelAsientos pa;
-	int piso;
-	int precio;
-	String nombre;
+	private int piso;
+	private int precio;
+	private String nombre;
     public Asiento(PanelAsientos pb, int a, int b, int piso, int precio, String nombre){
     	this.pa = pa;
         this.piso = piso;

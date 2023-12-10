@@ -5,6 +5,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class PanelAsientos extends JPanel{
+	private int piso;
 	Asiento A1, A2;
 	Asiento B1, B2;
 	Asiento C1, C2;
@@ -20,10 +21,12 @@ public class PanelAsientos extends JPanel{
 	Asiento L1, L2, L3, L4;
 	Asiento M1, M2, M3, M4;
 	Asiento N1, N2, N3, N4;
+	Font font = new Font("Arial", Font.BOLD, 20);
 	public PanelAsientos(int piso) {
 		this.setBounds(430,50,320,570);
-		this.setBackground(new Color(100, 100, 100, 100));
+		this.setBackground(new Color(100, 100, 100, 230));
 		this.setLayout(null);
+		this.piso = piso;
 		if(piso == 1) {
 			B1 = new Asiento(this, 20, 100, 1, 1, "B1");
 			C1 = new Asiento(this, 20, 180, 1, 1, "C1");
@@ -133,6 +136,34 @@ public class PanelAsientos extends JPanel{
 			this.add(L4);
 			this.add(M4);
 			this.add(N4);
+		}
+	}
+
+	@Override
+	protected void paintComponent(Graphics g) {
+		super.paintComponent(g);
+		switch (piso){
+			case 1:
+				g.setColor(Color.BLACK);
+				g.fillRect(200, 500,100,60);
+				g.fillRect(200, 100,100,140);
+				g.fillRect(20, 20,100,60);
+
+				g.setColor(Color.WHITE);
+				g.setFont(font);
+				g.drawString("Chofer", 35, 58);
+				g.drawString("Entrada", 215, 160);
+				g.drawString("/", 250, 180);
+				g.drawString("Escalera", 210, 200);
+				g.drawString("Baño", 225, 538);
+
+			case 2:
+				g.setColor(Color.BLACK);
+				g.fillRect(200, 100,100,60);
+
+				g.setColor(Color.WHITE);
+				g.setFont(font);
+				g.drawString("Escalera", 210, 138);
 		}
 	}
 }
