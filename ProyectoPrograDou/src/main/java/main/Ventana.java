@@ -3,10 +3,12 @@ package main;
 import javax.swing.*;
 
 import panelPrincipal.PanelPrincipal;
+import panelBus.PanelBus;
 
 public class Ventana extends JFrame{
 	int boton;
 	PanelPrincipal pp;
+	PanelBus pb;
 	Pasaje pa1;
 	Pasaje pa2;
     public Ventana() {
@@ -20,6 +22,7 @@ public class Ventana extends JFrame{
         this.setResizable(false);
         
         pp = new PanelPrincipal(this);
+        pb = new PanelBus(this);
         this.add(pp);
 
         ImageIcon image = new ImageIcon("doubuslogodou.jpg");
@@ -35,6 +38,7 @@ public class Ventana extends JFrame{
     		pa2 = pp.crearPasaje(2);
     	}  	
     	this.remove(pp);
+    	this.add(pb);
     	this.repaint();
     }
 }

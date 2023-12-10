@@ -24,7 +24,6 @@ public class PanelPrincipal extends JPanel {
     public PanelPrincipal(Ventana v) {
         this.setLayout(null);
         this.setBounds(0,0,1080,720);
-        this.setBackground(Color.DARK_GRAY);
         this.setLayout(null);
         this.v = v;
         
