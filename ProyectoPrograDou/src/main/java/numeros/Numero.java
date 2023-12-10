@@ -9,7 +9,6 @@ public abstract class Numero extends JPanel{
         this.setBounds(0,20,80,90);
         this.setBackground(Color.BLACK);
     }
-
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
@@ -19,5 +18,8 @@ public abstract class Numero extends JPanel{
         g.fillRect(0, 0, 1,90);
         g.fillRect(79, 0, 1,90);
         g.fillRect(0, 89, 80,1);
+
+        dibujarNumero(g);
     }
+    protected abstract void dibujarNumero(Graphics g);
 }

@@ -6,11 +6,8 @@ public class Numero16 extends Numero{
     public Numero16(){
         super();
     }
-
     @Override
-    protected void paintComponent(Graphics g) {
-        super.paintComponent(g);
-
+    protected void dibujarNumero(Graphics g) {
         g.setColor(Color.WHITE);
         Font font = new Font("Arial", Font.BOLD, 40);
         g.setFont(font);

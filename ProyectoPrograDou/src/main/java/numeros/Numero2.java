@@ -10,12 +10,10 @@ public class Numero2 extends Numero{
     }
 
     @Override
-    protected void paintComponent(Graphics g) {
-        super.paintComponent(g);
-
+    protected void dibujarNumero(Graphics g) {
         g.setColor(Color.WHITE);
         Font font = new Font("Arial", Font.BOLD, 40);
         g.setFont(font);
-        g.drawString("2", 25, 60);
+        g.drawString("2", 30, 60);
     }
 }

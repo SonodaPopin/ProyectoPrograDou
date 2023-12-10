@@ -14,10 +14,8 @@ public abstract class Fechas extends JPanel{
 	FlechaArriba fa;
 	FlechaAbajo faa;
 	protected Numero n;
-	public void Siguiente() {
-	}
-	public void Anterior() {
-	}
+	public abstract void Siguiente();
+	public abstract void Anterior();
 	public int getActual() {
 		return actual;
 	}

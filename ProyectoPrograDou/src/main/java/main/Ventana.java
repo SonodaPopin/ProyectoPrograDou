@@ -6,7 +6,7 @@ import panelPrincipal.PanelPrincipal;
 import panelBus.PanelBus;
 
 public class Ventana extends JFrame{
-	int boton;
+	private int boton;
 	PanelPrincipal pp;
 	PanelBus pb;
 	Pasaje pa1;
@@ -30,7 +30,7 @@ public class Ventana extends JFrame{
     }
     public void Parte2(int boton) {
     	this.boton = boton;
-    	if (boton == 1) { 
+    	if (boton == 1) {
     		pa1 = pp.crearPasaje(1);
     	}
     	else {
