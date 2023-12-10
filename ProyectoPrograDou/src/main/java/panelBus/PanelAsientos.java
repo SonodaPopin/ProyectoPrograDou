@@ -21,33 +21,33 @@ public class PanelAsientos extends JPanel{
 	Asiento M1, M2, M3, M4;
 	Asiento N1, N2, N3, N4;
 	public PanelAsientos(int piso) {
-		this.setBounds(430,50,550,570);
+		this.setBounds(430,50,320,570);
 		this.setBackground(new Color(100, 100, 100, 100));
 		this.setLayout(null);
 		if(piso == 1) {
-			B1 = new Asiento(this, 20, 100, 1, 1);
-			C1 = new Asiento(this, 20, 180, 1, 1);
-			D1 = new Asiento(this, 20, 260, 1, 1);
-			E1 = new Asiento(this, 20, 340, 1, 1);
-			F1= new Asiento(this, 20, 420, 1, 1);
-			G1 = new Asiento(this, 20, 500, 1, 1);
+			B1 = new Asiento(this, 20, 100, 1, 1, "B1");
+			C1 = new Asiento(this, 20, 180, 1, 1, "C1");
+			D1 = new Asiento(this, 20, 260, 1, 1, "D1");
+			E1 = new Asiento(this, 20, 340, 1, 1, "E1");
+			F1 = new Asiento(this, 20, 420, 1, 1, "F1");
+			G1 = new Asiento(this, 20, 500, 1, 1, "G1");
 			
-			B2 = new Asiento(this, 80, 100, 1, 1);
-			C2 = new Asiento(this, 80, 180, 1, 1);
-			D2 = new Asiento(this, 80, 260, 1, 1);
-			E2 = new Asiento(this, 80, 340, 1, 1);
-			F2 = new Asiento(this, 80, 420, 1, 1);
-			G2 = new Asiento(this, 80, 500, 1, 1);
+			B2 = new Asiento(this, 80, 100, 1, 1, "B2");
+			C2 = new Asiento(this, 80, 180, 1, 1, "C2");
+			D2 = new Asiento(this, 80, 260, 1, 1, "D2");
+			E2 = new Asiento(this, 80, 340, 1, 1, "E2");
+			F2 = new Asiento(this, 80, 420, 1, 1, "F2");
+			G2 = new Asiento(this, 80, 500, 1, 1, "G2");
 			
-			A1 = new Asiento(this, 200, 20, 1, 1);
-			D3 = new Asiento(this, 200, 260, 1, 1);
-			E3 = new Asiento(this, 200, 340, 1, 1);
-			F3 = new Asiento(this, 200, 420, 1, 1);
+			A1 = new Asiento(this, 200, 20, 1, 2, "A1");
+			D3 = new Asiento(this, 200, 260, 1, 1, "D3");
+			E3 = new Asiento(this, 200, 340, 1, 1, "E3");
+			F3 = new Asiento(this, 200, 420, 1, 1, "F3");
 			
-			A2 = new Asiento(this, 20, 260, 1, 1);
-			D4 = new Asiento(this, 260, 260, 1, 1);
-			E4 = new Asiento(this, 260, 340, 1, 1);
-			F4 = new Asiento(this, 260, 420, 1, 1);
+			A2 = new Asiento(this, 260, 20, 1, 2, "A2");
+			D4 = new Asiento(this, 260, 260, 1, 1, "D4");
+			E4 = new Asiento(this, 260, 340, 1, 1, "E4");
+			F4 = new Asiento(this, 260, 420, 1, 1, "F4");
 		
 			this.add(B1);
 			this.add(C1);
@@ -74,19 +74,65 @@ public class PanelAsientos extends JPanel{
 			this.add(F4);
 		}
 		else {
-			B1 = new Asiento(this, 20, 100, 1, 1);
-			C1 = new Asiento(this, 20, 180, 1, 1);
-			D1 = new Asiento(this, 20, 260, 1, 1);
-			E1 = new Asiento(this, 20, 340, 1, 1);
-			F1= new Asiento(this, 20, 420, 1, 1);
-			G1 = new Asiento(this, 20, 500, 1, 1);
-		
-			this.add(B1);
-			this.add(C1);
-			this.add(D1);
-			this.add(E1);
-			this.add(F1);
-			this.add(G1);
+			H1 = new Asiento(this, 20, 20, 1, 2, "H1");
+			I1 = new Asiento(this, 20, 100, 1, 1, "I1");
+			J1 = new Asiento(this, 20, 180, 1, 1, "J1");
+			K1 = new Asiento(this, 20, 260, 1, 1, "K1");
+			L1 = new Asiento(this, 20, 340, 1, 1, "L1");
+			M1 = new Asiento(this, 20, 420, 1, 1, "M1");
+			N1 = new Asiento(this, 20, 500, 1, 1, "N1");
+			
+			H2 = new Asiento(this, 80, 20, 1, 2, "H2");
+			I2 = new Asiento(this, 80, 100, 1, 1, "I2");
+			J2 = new Asiento(this, 80, 180, 1, 1, "J2");
+			K2 = new Asiento(this, 80, 260, 1, 1, "K2");
+			L2 = new Asiento(this, 80, 340, 1, 1, "L2");
+			M2 = new Asiento(this, 80, 420, 1, 1, "M2");
+			N2 = new Asiento(this, 80, 500, 1, 1, "N2");
+			
+			H3 = new Asiento(this, 200, 20, 1, 2, "H3");
+			J3 = new Asiento(this, 200, 180, 1, 1, "J3");
+			K3 = new Asiento(this, 200, 260, 1, 1, "K3");
+			L3 = new Asiento(this, 200, 340, 1, 1, "L3");
+			M3 = new Asiento(this, 200, 420, 1, 1, "M3");
+			N3 = new Asiento(this, 200, 500, 1, 1, "N3");
+			
+			H4 = new Asiento(this, 260, 20, 1, 2, "H4");
+			J4 = new Asiento(this, 260, 180, 1, 1, "J4");
+			K4 = new Asiento(this, 260, 260, 1, 1, "K4");
+			L4 = new Asiento(this, 260, 340, 1, 1, "L4");
+			M4 = new Asiento(this, 260, 420, 1, 1, "M4");
+			N4 = new Asiento(this, 260, 500, 1, 1, "N4");
+			
+			this.add(H1);
+			this.add(I1);
+			this.add(J1);
+			this.add(K1);
+			this.add(L1);
+			this.add(M1);
+			this.add(N1);
+			
+			this.add(H2);
+			this.add(I2);
+			this.add(J2);
+			this.add(K2);
+			this.add(L2);
+			this.add(M2);
+			this.add(N2);
+			
+			this.add(H3);
+			this.add(J3);
+			this.add(K3);
+			this.add(L3);
+			this.add(M3);
+			this.add(N3);
+			
+			this.add(H4);
+			this.add(J4);
+			this.add(K4);
+			this.add(L4);
+			this.add(M4);
+			this.add(N4);
 		}
 	}
 }

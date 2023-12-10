@@ -8,6 +8,11 @@ import panelPrincipal.*;
 public class PanelBus extends JPanel{
 	Ventana v;
 	Doubus db;
+	BotonConfirmarBus bcb;
+	BotonCancelarBus bccb;
+	Informacion inf;
+	BotonPiso1 bp1;
+	BotonPiso2 bp2;
 	int pisos;
 	PanelAsientos piso1, piso2;
 	Pasaje p;
@@ -20,9 +25,22 @@ public class PanelBus extends JPanel{
         this.v = v;
         
         db = new Doubus();
-        piso1 = new PanelAsientos(1);       
+        inf = new Informacion();
+        bcb = new BotonConfirmarBus(this);
+        bccb = new BotonCancelarBus(this);
+        piso1 = new PanelAsientos(1);   
+        
+        bp1 = new BotonPiso1();
+        bp2 = new BotonPiso2();
+        
         this.add(db);
+        this.add(inf);
+        this.add(bcb);
+        this.add(bccb);
         this.add(piso1);
+        
+        this.add(bp1);
+        this.add(bp2);
         
     }
     @Override

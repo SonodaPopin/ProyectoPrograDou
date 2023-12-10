@@ -11,12 +11,19 @@ public class Asiento extends JPanel implements MouseListener{
 	PanelAsientos pa;
 	int piso;
 	int precio;
-    public Asiento(PanelAsientos pb, int a, int b, int piso, int precio){
+	String nombre;
+    public Asiento(PanelAsientos pb, int a, int b, int piso, int precio, String nombre){
     	this.pa = pa;
         this.piso = piso;
         this.precio = precio;
+        this.nombre = nombre;
         this.setBounds(a,b,40,60);
-        this.setBackground(Color.RED);
+        if(precio == 1) {
+            this.setBackground(Color.GREEN);
+        }
+        else if(precio == 2) {
+        	this.setBackground(Color.YELLOW);
+        }
         this.setLayout(null);
         this.addMouseListener(this);
     }
