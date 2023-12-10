@@ -5,7 +5,13 @@ import java.awt.*;
 import java.awt.event.*;
 import numeros.*;
 
+/**
+ * Clase que representa un mes mostrando un panel con un número
+ */
 public class Mes extends Fechas{
+    /**
+     * Método constructor que crea el panel
+     */
     public Mes(){
     	if (actual == 0) {
     		actual = 11;

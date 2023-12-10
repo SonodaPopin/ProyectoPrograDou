@@ -4,6 +4,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
+/**
+ * Clase que representa un ticket de bus
+ */
 public class Ticket extends JPanel implements MouseListener{
 	PanelTickets pt;
     private int pisos;
@@ -13,6 +16,15 @@ public class Ticket extends JPanel implements MouseListener{
     Font font20 = new Font("Arial", Font.BOLD, 20);
     Color AzulClaro = new Color(51,153,255);
 
+    /**
+     * Método para crear el panel
+     * @param pt - panel sobre el que se crea
+     * @param a - coordenada x
+     * @param b - coordenada y
+     * @param pisos - numero de pisos
+     * @param tipo - Salón cama o semi cama
+     * @param hora - Hora del viaje
+     */
     public Ticket(PanelTickets pt, int a, int b, int pisos, int tipo, String hora){
     	this.pt = pt;
         this.pisos = pisos;
@@ -23,12 +35,24 @@ public class Ticket extends JPanel implements MouseListener{
         this.setLayout(null);
         this.addMouseListener(this);
     }
+    /**
+     * Método que entrega la hora del viaje
+     * @return - hora
+     */
     public String getHora(){
         return hora;
     }
+    /**
+     * Método que entrega los pisos del bus
+     * @return - pisos
+     */
     public int getPisos() {
     	return pisos;
     }
+    /**
+     * Método que entrega el tipo de bus
+     * @return - Semi cama o Salón cama
+     */
     public String getTipo() {
     	if (tipo == 1) {
     		return "Semi cama";
@@ -70,6 +94,10 @@ public class Ticket extends JPanel implements MouseListener{
 
         personalizar(g);
     }
+    /**
+     * Método que dibuja el bus según su número de pisos
+     * @param g
+     */
     private void personalizar(Graphics g) {
         switch (pisos) {
             case 1:

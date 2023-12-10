@@ -4,8 +4,15 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
+/**
+ *  * Clase que representa un panel con una flecha hacia abajo
+ */
 public class FlechaAbajo extends JPanel implements MouseListener{
 	Fechas f;
+    /**
+     * Método constructor que crea el panel
+     * @param f - panel sobre el que se muestra la flecha
+     */
     public FlechaAbajo(Fechas f){
     	this.f = f;
         this.setBounds(0,110,80,20);

@@ -4,6 +4,9 @@ import javax.swing.*;
 import java.awt.*;
 import main.*;
 
+/**
+ * Clase que representa el panel donde se muestran los datos y botones para elegir un pasaje de bus
+ */
 public class PanelPrincipal extends JPanel {
     protected int boton;
     protected int destructor = 0;
@@ -21,6 +24,10 @@ public class PanelPrincipal extends JPanel {
 	PanelTickets pt1, pt2;
 	BotonConfirmar bc;
 	BotonCancelar bcc;
+    /**
+     * Método constructor del panel
+     * @param v - ventana sobre la que se crea el panel
+     */
     public PanelPrincipal(Ventana v) {
         this.setBounds(0,0,1080,720);
         this.setLayout(null);
@@ -44,6 +51,9 @@ public class PanelPrincipal extends JPanel {
         this.add(db); 
         inicioSi();
     }
+    /**
+     * Método que añade más botones sobre el panel
+     */
     public void botonesSi() {
         if (boton==1) {
             this.add(bdi);
@@ -65,6 +75,9 @@ public class PanelPrincipal extends JPanel {
         }
         v.repaint();
     }
+    /**
+     * Método que quita varios botones de sobre el panel
+     */
     public void botonesNo() {
         this.remove(bdi);
         this.remove(bdv);
@@ -75,6 +88,9 @@ public class PanelPrincipal extends JPanel {
 		bv.setBorder(BorderFactory.createEmptyBorder());
         v.repaint();
     }
+    /**
+     * Método para mostrar un PanelTickets sobre el panel
+     */
     public void ticketsSi() {
     	if (destructor == 0) {
     		pt1 = new PanelTickets(1);
@@ -96,6 +112,9 @@ public class PanelPrincipal extends JPanel {
     	}
 		v.repaint();
     }
+    /**
+     * Método para esconder el PanelTickets
+     */
     public void ticketsNo() {
     	this.remove(pt1);
     	this.remove(pt2);
@@ -103,14 +122,25 @@ public class PanelPrincipal extends JPanel {
         this.remove(bcc);
         v.repaint();
     }
+    /**
+     * Método que añade los botones iniciales al panel
+     */
     public void inicioSi() {
         this.add(bi);
         this.add(bv);
     }
+    /**
+     * Método que quita los botones iniciales del panel
+     */
     public void inicioNo() {
         this.remove(bi);
         this.remove(bv);
     }
+    /**
+     * Método que crea un pasaje con los datos ingresados en el panel
+     * @param a - numero 1 o 2 que decide si crear el pasaje de ida o de vuelta
+     * @return - el pasaje creado
+     */
     public Pasaje crearPasaje(int a) {
     	if (a == 1) {
     		Pasaje pasaje = new Pasaje(bdi.getDestino(), bdv.getDestino(), pt1, bfi);
@@ -121,6 +151,9 @@ public class PanelPrincipal extends JPanel {
     		return pasaje;
     	}
     }
+    /**
+     * Método que llama a otro método en ventana
+     */
     public void Order66(){
     	v.Parte2(boton);
     }

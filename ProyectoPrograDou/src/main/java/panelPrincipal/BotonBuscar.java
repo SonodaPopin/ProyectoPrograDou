@@ -5,10 +5,17 @@ import java.awt.*;
 import java.awt.event.*;
 import main.DateActual;
 
+/**
+ * Clase que representa un botón para buscar pasajes con los datos ingresados
+ */
 public class BotonBuscar extends JPanel implements MouseListener{
 	DateActual da;
 	PanelPrincipal pp;
 	Color VerdeOscuro = new Color(0,102,0);
+    /**
+     * Método constructor que crea el panel
+     * @param pp - Panel sobre el que se crea el boton
+     */
     public BotonBuscar(PanelPrincipal pp){
     	da = new DateActual();
     	this.pp = pp;

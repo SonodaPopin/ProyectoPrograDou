@@ -3,9 +3,15 @@ package panelPrincipal;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-
+/**
+ * Clase que representa un boton para comprar pasajes de ida
+ */
 public class BotonIda extends JPanel implements MouseListener{
 	PanelPrincipal pp;
+    /**
+     * Método que crea el boton
+     * @param pp - panel sobre el que se muestra el boton
+     */
     public BotonIda(PanelPrincipal pp){
     	this.pp = pp;
         this.setBounds(50,400,300,100);

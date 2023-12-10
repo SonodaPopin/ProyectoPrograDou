@@ -4,8 +4,13 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import numeros.*;
-
+/**
+ * Clase que representa un día mostrando un panel con un número
+ */
 public class Dia extends Fechas{
+    /**
+     * Método constructor que crea el panel
+     */
     public Dia(){
     	if (actual == 0) {
     		actual = 26;
