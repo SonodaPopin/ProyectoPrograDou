@@ -32,12 +32,15 @@ public class BotonConfirmar extends JPanel implements MouseListener{
 	}
 	@Override
 	public void mousePressed(MouseEvent e) {
-		if(pp.boton == 2 && pp.destructor == 1) {
-			pp.ticketsSi();
+		try {
+			if (pp.boton == 2 && pp.destructor == 1) {
+				pp.ticketsSi();
+			} else {
+				pp.Order66();
+			}
+		} catch (Exception ex) {
+			JOptionPane.showMessageDialog(this, "Debe eligir un pasaje de Ida y/o Vuelta para continuar", "Error", JOptionPane.ERROR_MESSAGE);
 		}
-		else {
-			pp.Order66();
-		}		
 	}
 	@Override
 	public void mouseReleased(MouseEvent e) {
