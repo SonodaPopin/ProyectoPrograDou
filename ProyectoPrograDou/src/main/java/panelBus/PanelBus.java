@@ -10,7 +10,9 @@ public class PanelBus extends JPanel{
 	Doubus db;
 	int pisos;
 	PanelAsientos piso1, piso2;
+	Pasaje p;
     public PanelBus(Ventana v, Pasaje p) {
+    	this.p = p;
     	pisos = p.getPisos();
         this.setLayout(null);
         this.setBounds(0,0,1080,720);
@@ -22,9 +24,6 @@ public class PanelBus extends JPanel{
         this.add(db);
         this.add(piso1);
         
-        if(pisos == 2) {
-        	piso2 = new PanelAsientos(2);
-        }
     }
     @Override
     protected void paintComponent(Graphics g) {

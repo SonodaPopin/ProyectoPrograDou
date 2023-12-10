@@ -8,8 +8,7 @@ import panelBus.PanelBus;
 public class Ventana extends JFrame{
 	private int boton;
 	PanelPrincipal pp;
-	PanelBus pb1;
-	PanelBus pb2;
+	PanelBus pb1, pb2;
 	Pasaje pa1;
 	Pasaje pa2;
     public Ventana() {

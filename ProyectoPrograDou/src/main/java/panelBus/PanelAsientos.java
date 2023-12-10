@@ -40,14 +40,14 @@ public class PanelAsientos extends JPanel{
 			G2 = new Asiento(this, 80, 500, 1, 1);
 			
 			A1 = new Asiento(this, 200, 20, 1, 1);
-			D2 = new Asiento(this, 200, 260, 1, 1);
-			E2 = new Asiento(this, 200, 340, 1, 1);
-			F2 = new Asiento(this, 200, 420, 1, 1);
+			D3 = new Asiento(this, 200, 260, 1, 1);
+			E3 = new Asiento(this, 200, 340, 1, 1);
+			F3 = new Asiento(this, 200, 420, 1, 1);
 			
-			A1 = new Asiento(this, 20, 260, 1, 1);
-			D2 = new Asiento(this, 260, 260, 1, 1);
-			E2 = new Asiento(this, 260, 340, 1, 1);
-			F2 = new Asiento(this, 260, 420, 1, 1);
+			A2 = new Asiento(this, 20, 260, 1, 1);
+			D4 = new Asiento(this, 260, 260, 1, 1);
+			E4 = new Asiento(this, 260, 340, 1, 1);
+			F4 = new Asiento(this, 260, 420, 1, 1);
 		
 			this.add(B1);
 			this.add(C1);
@@ -73,7 +73,7 @@ public class PanelAsientos extends JPanel{
 			this.add(E4);
 			this.add(F4);
 		}
-		else if(piso == 2) {
+		else {
 			B1 = new Asiento(this, 20, 100, 1, 1);
 			C1 = new Asiento(this, 20, 180, 1, 1);
 			D1 = new Asiento(this, 20, 260, 1, 1);
