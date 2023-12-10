@@ -30,17 +30,18 @@ public class PanelBus extends JPanel{
         bccb = new BotonCancelarBus(this);
         piso1 = new PanelAsientos(2);
         
-        bp1 = new BotonPiso1();
-        bp2 = new BotonPiso2();
+        if(pisos == 2) {
+        	bp1 = new BotonPiso1();
+        	bp2 = new BotonPiso2();
+        	this.add(bp1);
+        	this.add(bp2);
+        }
         
         this.add(db);
         this.add(inf);
         this.add(bcb);
         this.add(bccb);
         this.add(piso1);
-        
-        this.add(bp1);
-        this.add(bp2);
         
     }
     @Override

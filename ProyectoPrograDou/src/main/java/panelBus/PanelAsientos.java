@@ -5,6 +5,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class PanelAsientos extends JPanel{
+	AsientoBuilder constructor;
 	private int piso;
 	Asiento A1, A2;
 	Asiento B1, B2;
@@ -23,34 +24,56 @@ public class PanelAsientos extends JPanel{
 	Asiento N1, N2, N3, N4;
 	Font font = new Font("Arial", Font.BOLD, 20);
 	public PanelAsientos(int piso) {
+		this.piso = piso;
+		constructor = new AsientoBuilder();
+		constructor.setPA(this).setPiso(piso);
 		this.setBounds(430,50,320,570);
 		this.setBackground(new Color(100, 100, 100, 230));
 		this.setLayout(null);
-		this.piso = piso;
 		if(piso == 1) {
-			B1 = new Asiento(this, 20, 100, 1, 1, "B1");
-			C1 = new Asiento(this, 20, 180, 1, 1, "C1");
-			D1 = new Asiento(this, 20, 260, 1, 1, "D1");
-			E1 = new Asiento(this, 20, 340, 1, 1, "E1");
-			F1 = new Asiento(this, 20, 420, 1, 1, "F1");
-			G1 = new Asiento(this, 20, 500, 1, 1, "G1");
+			constructor.setX(20).setY(100).setPrecio(0).setNombre("B1");
+			B1 = constructor.build();
+			constructor.setY(180).setNombre("C1");
+			C1 = constructor.build();
+			constructor.setY(260).setNombre("D1");
+			D1 = constructor.build();
+			constructor.setY(340).setNombre("E1");
+			E1 = constructor.build();
+			constructor.setY(420).setNombre("F1");
+			F1 = constructor.build();
+			constructor.setY(500).setNombre("G1");
+			G1 = constructor.build();
 			
-			B2 = new Asiento(this, 80, 100, 1, 1, "B2");
-			C2 = new Asiento(this, 80, 180, 1, 1, "C2");
-			D2 = new Asiento(this, 80, 260, 1, 1, "D2");
-			E2 = new Asiento(this, 80, 340, 1, 1, "E2");
-			F2 = new Asiento(this, 80, 420, 1, 1, "F2");
-			G2 = new Asiento(this, 80, 500, 1, 1, "G2");
+			constructor.setX(80).setY(100).setNombre("B2");
+			B2 = constructor.build();
+			constructor.setY(180).setNombre("C2");
+			C2 = constructor.build();
+			constructor.setY(260).setNombre("D2");
+			D2 = constructor.build();
+			constructor.setY(340).setNombre("E2");
+			E2 = constructor.build();
+			constructor.setY(420).setNombre("F2");
+			F2 = constructor.build();
+			constructor.setY(500).setNombre("G2");
+			G2 = constructor.build();
 			
-			A1 = new Asiento(this, 200, 20, 1, 2, "A1");
-			D3 = new Asiento(this, 200, 260, 1, 1, "D3");
-			E3 = new Asiento(this, 200, 340, 1, 1, "E3");
-			F3 = new Asiento(this, 200, 420, 1, 1, "F3");
+			constructor.setX(200).setY(20).setNombre("A1").setPrecio(2);
+			A1 = constructor.build();
+			constructor.setY(260).setNombre("D3").setPrecio(0);
+			D3 = constructor.build();
+			constructor.setY(340).setNombre("E3");
+			E3 = constructor.build();
+			constructor.setY(420).setNombre("F3");
+			F3 = constructor.build();
 			
-			A2 = new Asiento(this, 260, 20, 1, 2, "A2");
-			D4 = new Asiento(this, 260, 260, 1, 1, "D4");
-			E4 = new Asiento(this, 260, 340, 1, 1, "E4");
-			F4 = new Asiento(this, 260, 420, 1, 1, "F4");
+			constructor.setX(260).setY(20).setNombre("A2").setPrecio(2);
+			A2 = constructor.build();
+			constructor.setY(260).setNombre("D4").setPrecio(0);
+			D4 = constructor.build();
+			constructor.setY(340).setNombre("E4");
+			E4 = constructor.build();
+			constructor.setY(420).setNombre("F4");
+			F4 = constructor.build();
 		
 			this.add(B1);
 			this.add(C1);
@@ -77,36 +100,62 @@ public class PanelAsientos extends JPanel{
 			this.add(F4);
 		}
 		else {
-			H1 = new Asiento(this, 20, 20, 1, 2, "H1");
-			I1 = new Asiento(this, 20, 100, 1, 1, "I1");
-			J1 = new Asiento(this, 20, 180, 1, 1, "J1");
-			K1 = new Asiento(this, 20, 260, 1, 1, "K1");
-			L1 = new Asiento(this, 20, 340, 1, 1, "L1");
-			M1 = new Asiento(this, 20, 420, 1, 1, "M1");
-			N1 = new Asiento(this, 20, 500, 1, 1, "N1");
+			constructor.setX(20).setY(20).setPrecio(2).setNombre("H1");
+			H1 = constructor.build();
+			constructor.setY(100).setNombre("I1").setPrecio(0);
+			I1 = constructor.build();
+			constructor.setY(180).setNombre("J1");
+			J1 = constructor.build();
+			constructor.setY(260).setNombre("K1");
+			K1 = constructor.build();
+			constructor.setY(340).setNombre("L1");
+			L1 = constructor.build();
+			constructor.setY(420).setNombre("M1");
+			M1 = constructor.build();
+			constructor.setY(500).setNombre("N1");
+			N1 = constructor.build();
 			
-			H2 = new Asiento(this, 80, 20, 1, 2, "H2");
-			I2 = new Asiento(this, 80, 100, 1, 1, "I2");
-			J2 = new Asiento(this, 80, 180, 1, 1, "J2");
-			K2 = new Asiento(this, 80, 260, 1, 1, "K2");
-			L2 = new Asiento(this, 80, 340, 1, 1, "L2");
-			M2 = new Asiento(this, 80, 420, 1, 1, "M2");
-			N2 = new Asiento(this, 80, 500, 1, 1, "N2");
+			constructor.setX(80).setY(20).setPrecio(2).setNombre("H2");
+			H2 = constructor.build();
+			constructor.setY(100).setNombre("I2").setPrecio(0);
+			I2 = constructor.build();
+			constructor.setY(180).setNombre("J2");
+			J2 = constructor.build();
+			constructor.setY(260).setNombre("K2");
+			K2 = constructor.build();
+			constructor.setY(340).setNombre("L2");
+			L2 = constructor.build();
+			constructor.setY(420).setNombre("M2");
+			M2 = constructor.build();
+			constructor.setY(500).setNombre("N2");
+			N2 = constructor.build();
 			
-			H3 = new Asiento(this, 200, 20, 1, 2, "H3");
-			J3 = new Asiento(this, 200, 180, 1, 1, "J3");
-			K3 = new Asiento(this, 200, 260, 1, 1, "K3");
-			L3 = new Asiento(this, 200, 340, 1, 1, "L3");
-			M3 = new Asiento(this, 200, 420, 1, 1, "M3");
-			N3 = new Asiento(this, 200, 500, 1, 1, "N3");
+			constructor.setX(200).setY(20).setPrecio(2).setNombre("H3");
+			H3 = constructor.build();
+			constructor.setY(180).setNombre("J3").setPrecio(0);
+			J3 = constructor.build();
+			constructor.setY(260).setNombre("K3");
+			K3 = constructor.build();
+			constructor.setY(340).setNombre("L3");
+			L3 = constructor.build();
+			constructor.setY(420).setNombre("M3");
+			M3 = constructor.build();
+			constructor.setY(500).setNombre("N3");
+			N3 = constructor.build();
 			
-			H4 = new Asiento(this, 260, 20, 1, 2, "H4");
-			J4 = new Asiento(this, 260, 180, 1, 1, "J4");
-			K4 = new Asiento(this, 260, 260, 1, 1, "K4");
-			L4 = new Asiento(this, 260, 340, 1, 1, "L4");
-			M4 = new Asiento(this, 260, 420, 1, 1, "M4");
-			N4 = new Asiento(this, 260, 500, 1, 1, "N4");
-			
+			constructor.setX(260).setY(20).setPrecio(2).setNombre("H4");
+			H4 = constructor.build();
+			constructor.setY(180).setNombre("J4").setPrecio(0);
+			J4 = constructor.build();
+			constructor.setY(260).setNombre("K4");
+			K4 = constructor.build();
+			constructor.setY(340).setNombre("L4");
+			L4 = constructor.build();
+			constructor.setY(420).setNombre("M4");
+			M4 = constructor.build();
+			constructor.setY(500).setNombre("N4");
+			N4 = constructor.build();
+
 			this.add(H1);
 			this.add(I1);
 			this.add(J1);

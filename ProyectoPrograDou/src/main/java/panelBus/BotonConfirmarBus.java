@@ -6,6 +6,7 @@ import java.awt.Graphics;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
+import javax.swing.BorderFactory;
 import javax.swing.JPanel;
 
 import panelPrincipal.PanelPrincipal;
@@ -51,13 +52,11 @@ public class BotonConfirmarBus extends JPanel implements MouseListener{
 
 	@Override
 	public void mouseEntered(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
+        this.setBorder(BorderFactory.createLineBorder(Color.YELLOW, 2));
 	}
-
+	
 	@Override
 	public void mouseExited(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
+		this.setBorder(BorderFactory.createEmptyBorder());
 	}
 }
