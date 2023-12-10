@@ -28,7 +28,7 @@ public class PanelBus extends JPanel{
         inf = new Informacion();
         bcb = new BotonConfirmarBus(this);
         bccb = new BotonCancelarBus(this);
-        piso1 = new PanelAsientos(1);   
+        piso1 = new PanelAsientos(2);
         
         bp1 = new BotonPiso1();
         bp2 = new BotonPiso2();
