@@ -6,9 +6,9 @@ import java.awt.*;
 import Ciudades.*;
 
 public class BotonDestinoVuelta extends BotonDestino{
-    BotonDestinoVuelta(){
-    	actual = 10;
-    	d = EnumCiudades.getCiudad(actual);
+    public BotonDestinoVuelta(){
+    	setActual(10);
+    	d = EnumCiudades.getCiudad(getActual());
     	fd = new FlechaDerecha(this);
     	fi = new FlechaIzquierda(this);
         this.setBounds(430,150,550,60);

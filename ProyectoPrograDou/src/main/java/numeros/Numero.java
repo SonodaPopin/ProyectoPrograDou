@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 public abstract class Numero extends JPanel{
-    Numero(){
+    public Numero(){
         this.setBounds(0,20,80,90);
         this.setBackground(Color.BLACK);
     }

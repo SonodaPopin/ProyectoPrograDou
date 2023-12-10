@@ -9,11 +9,11 @@ import java.awt.event.*;
 import numeros.*;
 
 public abstract class Fechas extends JPanel{
-	int limit = 0;
-	int actual = 0;
+	protected int limit = 0;
+	protected int actual = 0;
 	FlechaArriba fa;
 	FlechaAbajo faa;
-	Numero n;	
+	protected Numero n;
 	public void Siguiente() {
 	}
 	public void Anterior() {

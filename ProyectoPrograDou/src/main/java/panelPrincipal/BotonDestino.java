@@ -1,12 +1,12 @@
 package panelPrincipal;
 
 import javax.swing.*;
-import java.awt.*;
+
 import Ciudades.*;
 
 public abstract class BotonDestino extends JPanel{
 	EnumCiudades[] destinos = EnumCiudades.values();
-	int actual;
+	protected int actual;
 	Ciudad d;
 	FlechaDerecha fd;
 	FlechaIzquierda fi;
@@ -28,5 +28,12 @@ public abstract class BotonDestino extends JPanel{
 		EnumCiudades destino = destinos[actual];
 		String ciudad = destino.name();
 		return ciudad;
+	}
+
+	public int getActual() {
+		return actual;
+	}
+	public void setActual(int dou) {
+		this.actual = dou;
 	}
 }

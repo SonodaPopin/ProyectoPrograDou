@@ -3,10 +3,10 @@ package main;
 import panelPrincipal.*;
 
 public class Pasaje {
-	String partida, destino;
-	int dia, mes, año;	
-	String hora, tipo;
-	int pisos;
+	private String partida, destino;
+	private int dia, mes, año;
+	private String hora, tipo;
+	private int pisos;
 	public Pasaje(String partida, String destino, PanelTickets pt, BotonFecha bf){
 		this.partida = partida;
 		this.destino = destino;

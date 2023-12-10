@@ -6,7 +6,7 @@ import java.awt.event.*;
 
 public class BotonVuelta extends JPanel implements MouseListener{
 	PanelPrincipal pp;
-    BotonVuelta(PanelPrincipal pp){
+    public BotonVuelta(PanelPrincipal pp){
     	this.pp = pp;
         this.setBounds(50,520,300,100);
         this.setBackground(Color.gray);

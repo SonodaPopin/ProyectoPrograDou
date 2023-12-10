@@ -7,7 +7,7 @@ import java.awt.event.*;
 public class BotonConfirmar extends JPanel implements MouseListener{
 	PanelPrincipal pp;
 	Color VerdeOscuro = new Color(0,102,0);
-    BotonConfirmar(PanelPrincipal pp){
+    public BotonConfirmar(PanelPrincipal pp){
     	this.pp = pp;
         this.setBounds(50,400,300,100);
         this.setBackground(VerdeOscuro);

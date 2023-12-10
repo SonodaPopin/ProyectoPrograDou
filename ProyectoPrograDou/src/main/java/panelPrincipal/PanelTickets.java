@@ -16,7 +16,7 @@ public class PanelTickets extends JPanel {
 	Ticket t6;
 	private int mensaje;
 	Font font30 = new Font("Arial", Font.BOLD, 30);
-    PanelTickets(int mensaje){
+    public PanelTickets(int mensaje){
 		this.mensaje = mensaje;
     	random = new Random();
     	t1 = createTicket(0,80);

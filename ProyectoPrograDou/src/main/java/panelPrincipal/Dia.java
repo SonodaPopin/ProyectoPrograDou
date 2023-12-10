@@ -6,7 +6,7 @@ import java.awt.event.*;
 import numeros.*;
 
 public class Dia extends Fechas{
-    Dia(){
+    public Dia(){
     	if (actual == 0) {
     		actual = 26;
     	}

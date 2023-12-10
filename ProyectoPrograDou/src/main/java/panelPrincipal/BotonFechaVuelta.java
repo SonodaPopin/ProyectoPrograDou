@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class BotonFechaVuelta extends BotonFecha{
-    BotonFechaVuelta(){
+    public BotonFechaVuelta(){
     	d = new Dia();
     	m = new Mes();
     	a = new Año();

@@ -6,7 +6,7 @@ import java.awt.event.*;
 
 public class FlechaAbajo extends JPanel implements MouseListener{
 	Fechas f;
-    FlechaAbajo(Fechas f){
+    public FlechaAbajo(Fechas f){
     	this.f = f;
         this.setBounds(0,110,80,20);
         this.setBackground(Color.RED);

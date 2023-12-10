@@ -5,8 +5,8 @@ import java.awt.*;
 import main.*;
 
 public class PanelPrincipal extends JPanel {
-	int boton;
-	int destructor = 0;
+    protected int boton;
+    protected int destructor = 0;
 	Ventana v;
 	BotonIda bi;
 	BotonVuelta bv;

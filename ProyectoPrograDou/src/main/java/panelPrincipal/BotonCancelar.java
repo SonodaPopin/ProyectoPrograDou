@@ -7,7 +7,7 @@ import java.awt.event.*;
 public class BotonCancelar extends JPanel implements MouseListener{
 	PanelPrincipal pp;
 	Color VerdeOscuro = new Color(0,102,0);
-    BotonCancelar(PanelPrincipal pp){
+    public BotonCancelar(PanelPrincipal pp){
     	this.pp = pp;
         this.setBounds(50,520,300,100);
         this.setBackground(VerdeOscuro);

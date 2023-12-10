@@ -4,10 +4,10 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class DateActual {
-	int dia;
-	int mes;
-	int año;
-	Date ahora;
+	private int dia;
+	private int mes;
+	private int año;
+	private Date ahora;
 	public DateActual(){
 		ahora = new Date();
 		SimpleDateFormat diaa = new SimpleDateFormat("dd");

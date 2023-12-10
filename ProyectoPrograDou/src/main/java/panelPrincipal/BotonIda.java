@@ -6,7 +6,7 @@ import java.awt.event.*;
 
 public class BotonIda extends JPanel implements MouseListener{
 	PanelPrincipal pp;
-    BotonIda(PanelPrincipal pp){
+    public BotonIda(PanelPrincipal pp){
     	this.pp = pp;
         this.setBounds(50,400,300,100);
         this.setBackground(Color.gray);

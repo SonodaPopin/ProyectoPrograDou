@@ -6,7 +6,7 @@ import java.awt.event.*;
 import numeros.*;
 
 public class Año extends Fechas{
-    Año(){
+    public Año(){
     	if (actual == 0) {
     		actual = 23;
     	}

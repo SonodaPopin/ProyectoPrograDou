@@ -5,7 +5,7 @@ import java.awt.*;
 import Ciudades.*;
 
 public class BotonDestinoIda extends BotonDestino{
-    BotonDestinoIda(){
+    public BotonDestinoIda(){
     	actual = 4;
     	d = EnumCiudades.getCiudad(actual);
     	fd = new FlechaDerecha(this);

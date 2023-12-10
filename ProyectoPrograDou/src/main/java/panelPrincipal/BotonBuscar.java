@@ -9,7 +9,7 @@ public class BotonBuscar extends JPanel implements MouseListener{
 	DateActual da;
 	PanelPrincipal pp;
 	Color VerdeOscuro = new Color(0,102,0);
-    BotonBuscar(PanelPrincipal pp){
+    public BotonBuscar(PanelPrincipal pp){
     	da = new DateActual();
     	this.pp = pp;
         this.setBounds(430,520,240,100);

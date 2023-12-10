@@ -6,7 +6,7 @@ import java.awt.event.*;
 import numeros.*;
 
 public class Mes extends Fechas{
-    Mes(){
+    public Mes(){
     	if (actual == 0) {
     		actual = 11;
     	}

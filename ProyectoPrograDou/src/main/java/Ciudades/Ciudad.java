@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public abstract class Ciudad extends JPanel{
-    Ciudad(){
+    public Ciudad(){
         this.setBounds(210,0,280,60);
         this.setBackground(Color.BLACK);
     }
