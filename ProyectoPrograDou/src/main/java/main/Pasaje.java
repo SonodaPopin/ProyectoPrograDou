@@ -17,4 +17,7 @@ public class Pasaje {
 		mes = bf.getFecha()[1];
 		año = bf.getFecha()[2];
 	}
+	public int getPisos() {
+		return pisos;
+	}
 }

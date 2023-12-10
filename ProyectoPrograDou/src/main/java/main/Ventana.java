@@ -8,7 +8,8 @@ import panelBus.PanelBus;
 public class Ventana extends JFrame{
 	private int boton;
 	PanelPrincipal pp;
-	PanelBus pb;
+	PanelBus pb1;
+	PanelBus pb2;
 	Pasaje pa1;
 	Pasaje pa2;
     public Ventana() {
@@ -22,7 +23,6 @@ public class Ventana extends JFrame{
         this.setResizable(false);
         
         pp = new PanelPrincipal(this);
-        pb = new PanelBus(this);
         this.add(pp);
 
         ImageIcon image = new ImageIcon("doubuslogodou.jpg");
@@ -32,13 +32,16 @@ public class Ventana extends JFrame{
     	this.boton = boton;
     	if (boton == 1) {
     		pa1 = pp.crearPasaje(1);
+            pb1 = new PanelBus(this, pa1);
     	}
     	else {
     		pa1 = pp.crearPasaje(1);
     		pa2 = pp.crearPasaje(2);
-    	}  	
+            pb1 = new PanelBus(this, pa1);
+            pb2 = new PanelBus(this, pa2);
+    	}  
     	this.remove(pp);
-    	this.add(pb);
+    	this.add(pb1);
     	this.repaint();
     }
 }
