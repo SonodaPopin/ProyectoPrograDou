@@ -5,6 +5,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class PanelAsientos extends JPanel{
+	PanelBus pb;
 	AsientoBuilder constructor;
 	private int piso;
 	Asiento A1, A2;
@@ -23,8 +24,9 @@ public class PanelAsientos extends JPanel{
 	Asiento M1, M2, M3, M4;
 	Asiento N1, N2, N3, N4;
 	Font font = new Font("Arial", Font.BOLD, 20);
-	public PanelAsientos(int piso) {
+	public PanelAsientos(int piso, PanelBus pb) {
 		this.piso = piso;
+		this.pb = pb;
 		constructor = new AsientoBuilder();
 		constructor.setPA(this).setPiso(piso);
 		this.setBounds(430,50,320,570);

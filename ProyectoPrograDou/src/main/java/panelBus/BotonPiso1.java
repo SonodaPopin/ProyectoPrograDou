@@ -5,7 +5,9 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class BotonPiso1 extends JPanel implements MouseListener{
-	public BotonPiso1(){
+	PanelBus pb;
+	public BotonPiso1(PanelBus pb){
+		this.pb = pb;
 		this.setBounds(800,400,220,100);
 		this.setBackground(Color.darkGray);
 		this.setLayout(null);
@@ -30,7 +32,7 @@ public class BotonPiso1 extends JPanel implements MouseListener{
 
 	@Override
 	public void mousePressed(MouseEvent e) {
-		// TODO Auto-generated method stub
+		pb.mostrarPiso1();
 		
 	}
 

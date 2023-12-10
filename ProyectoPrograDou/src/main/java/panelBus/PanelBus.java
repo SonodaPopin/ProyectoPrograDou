@@ -28,11 +28,12 @@ public class PanelBus extends JPanel{
         inf = new Informacion();
         bcb = new BotonConfirmarBus(this);
         bccb = new BotonCancelarBus(this);
-        piso1 = new PanelAsientos(2);
+        piso1 = new PanelAsientos(1, this);
+        piso2 = new PanelAsientos(2, this);
         
         if(pisos == 2) {
-        	bp1 = new BotonPiso1();
-        	bp2 = new BotonPiso2();
+        	bp1 = new BotonPiso1(this);
+        	bp2 = new BotonPiso2(this);
         	this.add(bp1);
         	this.add(bp2);
         }
@@ -43,6 +44,16 @@ public class PanelBus extends JPanel{
         this.add(bccb);
         this.add(piso1);
         
+    }
+    public void mostrarPiso1() {
+    	this.remove(piso2);
+    	this.add(piso1);
+    	v.repaint();
+    }
+    public void mostrarPiso2() {
+    	this.remove(piso1);
+    	this.add(piso2);
+    	v.repaint();
     }
     @Override
     protected void paintComponent(Graphics g) {
