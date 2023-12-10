@@ -1,5 +1,8 @@
 package Ciudades;
 
+/**
+ * Enum que ordena las ciudades disponibles para viajar
+ */
 public enum EnumCiudades {
     ANTOFAGASTA(new Antofagasta()),
     ARICA(new Arica()),
@@ -21,6 +24,11 @@ public enum EnumCiudades {
     EnumCiudades (Ciudad lugar){
         this.lugar = lugar;
     }
+    /**
+     * Método para obtener un panel con el nombre de la ciudad en la posición entregada
+     * @param a - posición en el enum de la ciudad
+     * @return - panel con el nombre de la ciudad
+     */
     public static Ciudad getCiudad(int a) {
         return EnumCiudades.values()[a].lugar;
     }

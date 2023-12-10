@@ -9,6 +9,7 @@ import java.awt.event.*;
  */
 public class Ticket extends JPanel implements MouseListener{
 	PanelTickets pt;
+	private int coorx, coory;
     private int pisos;
     private int tipo;
     private String hora;
@@ -25,12 +26,14 @@ public class Ticket extends JPanel implements MouseListener{
      * @param tipo - Salón cama o semi cama
      * @param hora - Hora del viaje
      */
-    public Ticket(PanelTickets pt, int a, int b, int pisos, int tipo, String hora){
+    Ticket(PanelTickets pt, int a, int b, int pisos, int tipo, String hora){
+    	coorx = a;
+    	coory = b;
     	this.pt = pt;
         this.pisos = pisos;
         this.hora = hora;
         this.tipo = tipo;
-        this.setBounds(a,b,250,150);
+        this.setBounds(coorx,coory,250,150);
         this.setBackground(Color.RED);
         this.setLayout(null);
         this.addMouseListener(this);

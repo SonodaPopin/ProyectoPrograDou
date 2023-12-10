@@ -4,6 +4,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
+/**
+ * Clase que representa un panel con un número
+ */
 public abstract class Numero extends JPanel{
     public Numero(){
         this.setBounds(0,20,80,90);

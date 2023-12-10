@@ -1,5 +1,8 @@
 package numeros;
 
+/**
+ * Enum que ordena los números disponibles para representar fechas
+ */
 public enum EnumNumeros {
 	NOCERO(new Numero1()),
 	UNO(new Numero1()),
@@ -38,6 +41,11 @@ public enum EnumNumeros {
     EnumNumeros (Numero num){
         this.num = num;
     }
+    /**
+     * Método que entrega un panel con la imagen del número solicidato
+     * @param a - número solicitado
+     * @return - panel con el número dibujado
+     */
     public static Numero getNumero(int a) {
         return EnumNumeros.values()[a].num;
     }

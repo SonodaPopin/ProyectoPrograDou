@@ -1,7 +1,6 @@
 package panelPrincipal;
 
 import javax.swing.*;
-import java.util.Random;
 import java.awt.*;
 import java.awt.event.*;
 
@@ -9,7 +8,7 @@ import java.awt.event.*;
  * Clase que representa un panel sobre el que se muestran los tickets
  */
 public class PanelTickets extends JPanel {
-	Random random;
+	TicketBuilder constructor;
 	Ticket seleccionado = null;
 	Ticket t1;
 	Ticket t2;
@@ -24,14 +23,20 @@ public class PanelTickets extends JPanel {
      * @param mensaje - numero que decide entre dos opciones que mensaje se mostrará en el panel
      */
     public PanelTickets(int mensaje){
+    	constructor = new TicketBuilder();
 		this.mensaje = mensaje;
-    	random = new Random();
-    	t1 = createTicket(0,80);
-    	t2 = createTicket(300,80);
-    	t3 = createTicket(0,250);
-    	t4 = createTicket(300,250);
-    	t5 = createTicket(0,420);
-    	t6 = createTicket(300,420);
+		constructor.setPT(this).setX(0).setY(80);
+    	t1 = constructor.build();
+    	constructor.setX(300);
+    	t2 = constructor.build();
+    	constructor.setX(0).setY(250);
+    	t3 = constructor.build();
+    	constructor.setX(300);
+    	t4 = constructor.build();
+    	constructor.setX(0).setY(420);
+    	t5 = constructor.build();
+    	constructor.setX(300);
+    	t6 = constructor.build();
         this.setBounds(430,50,550,570);
         this.setBackground(new Color(0, 0, 0, 0));
         this.setLayout(null);
@@ -42,27 +47,6 @@ public class PanelTickets extends JPanel {
         this.add(t5);
         this.add(t6);
     }
-	/**
-	 * Método que crea un ticket aleatorio
-	 * @param a - coordenada x
-	 * @param b - coordenada y
-	 * @return - el ticket
-	 */
-	public Ticket createTicket(int a, int b){
-		String hora;
-		int c = random.nextInt(2)+1;
-		int d = random.nextInt(2)+1;
-		int e = random.nextInt(24);		
-		int g = random.nextInt(6);
-		if (e>9) {
-			hora = e+":"+g+"0";
-		}
-		else {
-			hora = "0"+e+":"+g+"0";
-		}
-		Ticket ticket = new Ticket(this,a,b,c,d,hora);
-		return ticket;
-	}
 	/**
 	 * Método que establece el ticket seleccionado por el usuario
 	 * @param seleccionado - ticket seleccionado
