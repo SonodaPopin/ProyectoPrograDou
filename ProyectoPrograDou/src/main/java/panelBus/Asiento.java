@@ -6,15 +6,24 @@ import panelPrincipal.PanelTickets;
 
 import java.awt.*;
 import java.awt.event.*;
+import main.*;
 
 public class Asiento extends JPanel implements MouseListener{
 	private int selected = -1;
 	private PanelAsientos pa;
 	private int coorx;
 	private int coory;
-	private int piso;
 	private int precio;
+	private Pasaje p;
+	
 	private String nombre;
+	private int piso;
+	private String fecha;
+	private String partida;
+	private String destino;
+	private String tipo;
+	private int preciofinal;
+	
     public Asiento(PanelAsientos pa, int a, int b, int piso, int precio, String nombre){
     	this.pa = pa;
     	coorx = a;
@@ -22,6 +31,7 @@ public class Asiento extends JPanel implements MouseListener{
         this.piso = piso;
         this.precio = precio;
         this.nombre = nombre;
+        p = pa.getPB().getPasaje();
         this.setBounds(a,b,40,60);
         if(precio == 1) {
             this.setBackground(Color.RED);
@@ -35,12 +45,25 @@ public class Asiento extends JPanel implements MouseListener{
             this.addMouseListener(this);
         }
         this.setLayout(null);
+        ExtraerDatos();
+    }
+    public void ExtraerDatos() {
+    	fecha = p.getFecha();
+    	partida = p.getPartida();
+    	destino = p.getDestino();
+    	preciofinal = 4000 + p.getTipo()*(4000 + precio*2000);
+    	if(p.getTipo()==1) {
+    		tipo = "Semi Cama";
+    	}
+    	else {
+    		tipo = "Salón Cama";
+    	}
     }
     public int getPiso() {
     	return piso;
     }
     public int getPrecio() {
-    	return precio;
+    	return preciofinal;
     }
     public String getNombre() {
     	return nombre;

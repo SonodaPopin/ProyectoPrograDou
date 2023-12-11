@@ -4,12 +4,14 @@ import javax.swing.*;
 
 import panelPrincipal.PanelPrincipal;
 import panelBus.PanelBus;
+import panelFinal.PanelFinal;
 
 public class Ventana extends JFrame{
 	private int boton;
 	private int panelactual;
 	PanelPrincipal pp;
 	PanelBus pb1, pb2;
+	PanelFinal pf;
 	Pasaje pa1;
 	Pasaje pa2;
 	AsientosSelec as;
@@ -53,8 +55,16 @@ public class Ventana extends JFrame{
     		this.add(pb2);
     		panelactual++;
     	}
-    	else {
+    	else if(boton == 2){
+    		pf = new PanelFinal(this, as);
     		this.remove(pb1);
+    		this.remove(pb2);
+    		this.add(pf);
+    	}
+    	else {
+    		pf = new PanelFinal(this, as);
+    		this.remove(pb1);
+    		this.add(pf);
     	}
     	this.repaint();
     }

@@ -56,13 +56,8 @@ public class Ticket extends JPanel implements MouseListener{
      * Método que entrega el tipo de bus
      * @return - Semi cama o Salón cama
      */
-    public String getTipo() {
-    	if (tipo == 1) {
-    		return "Semi cama";
-    	}
-    	else {
-    		return "Salón cama";
-    	}
+    public int getTipo() {
+    	return tipo;
     }
 
     @Override

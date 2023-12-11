@@ -65,6 +65,9 @@ public class PanelBus extends JPanel{
     public void removeAsiento(Asiento a) {
     	as.removeAsiento(a);
     }
+    public Pasaje getPasaje() {
+    	return p;
+    }
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
