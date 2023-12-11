@@ -5,7 +5,7 @@ import java.awt.*;
 import javax.swing.*;
 
 public class TotalPrecios extends JPanel{
-	int preciofinal;
+	private int preciofinal;
 	public TotalPrecios(int preciofinal){
         this.setBounds(0,470,550,100);
         this.setBackground(Color.DARK_GRAY);

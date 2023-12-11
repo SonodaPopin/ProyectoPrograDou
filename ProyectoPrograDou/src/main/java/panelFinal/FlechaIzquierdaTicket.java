@@ -11,7 +11,7 @@ public class FlechaIzquierdaTicket extends JPanel implements MouseListener{
 	PanelReservas pr;
     /**
      * Método constructor que crea el panel
-     * @param f - panel sobre el que se muestra la flecha
+     * @param pr - panel sobre el que se muestra la flecha
      */
     public FlechaIzquierdaTicket(PanelReservas pr){
     	this.pr = pr;
