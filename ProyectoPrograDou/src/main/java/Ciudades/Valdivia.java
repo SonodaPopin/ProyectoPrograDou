@@ -1,8 +1,13 @@
 package Ciudades;
 
 import java.awt.*;
-
+/**
+ * Clase que representa la ciudad Valdivia
+ */
 public class Valdivia extends Ciudad{
+    /**
+     * Método constructor del panel
+     */
     public Valdivia(){
         super();
     }

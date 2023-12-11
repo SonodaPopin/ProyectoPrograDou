@@ -1,8 +1,13 @@
 package Ciudades;
 
 import java.awt.*;
-
+/**
+ * Clase que representa la ciudad Copiapó
+ */
 public class Copiapó extends Ciudad{
+    /**
+     * Método constructor del panel
+     */
     public Copiapó(){
         super();
     }

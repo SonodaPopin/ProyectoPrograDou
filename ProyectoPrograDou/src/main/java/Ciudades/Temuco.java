@@ -1,8 +1,13 @@
 package Ciudades;
 
 import java.awt.*;
-
+/**
+ * Clase que representa la ciudad Temuco
+ */
 public class Temuco extends Ciudad{
+    /**
+     * Método constructor del panel
+     */
     public Temuco(){
         super();
     }

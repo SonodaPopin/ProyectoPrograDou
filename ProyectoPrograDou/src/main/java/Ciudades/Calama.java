@@ -1,8 +1,13 @@
 package Ciudades;
 
 import java.awt.*;
-
+/**
+ * Clase que representa la ciudad Calama
+ */
 public class Calama extends Ciudad{
+    /**
+     * Método constructor del panel
+     */
     public Calama(){
         super();
     }

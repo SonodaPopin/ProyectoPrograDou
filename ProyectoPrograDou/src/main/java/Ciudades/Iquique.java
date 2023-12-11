@@ -1,8 +1,13 @@
 package Ciudades;
 
 import java.awt.*;
-
+/**
+ * Clase que representa la ciudad Iquique
+ */
 public class Iquique extends Ciudad{
+    /**
+     * Método constructor del panel
+     */
     public Iquique(){
         super();
     }

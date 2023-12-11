@@ -1,8 +1,13 @@
 package Ciudades;
 
 import java.awt.*;
-
+/**
+ * Clase que representa la ciudad Talca
+ */
 public class Talca extends Ciudad{
+    /**
+     * Método constructor del panel
+     */
     public Talca(){
         super();
     }

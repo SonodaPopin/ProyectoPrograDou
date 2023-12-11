@@ -1,8 +1,13 @@
 package Ciudades;
 
 import java.awt.*;
-
+/**
+ * Clase que representa la ciudad PuertoMontt
+ */
 public class PuertoMontt extends Ciudad{
+    /**
+     * Método constructor del panel
+     */
     public PuertoMontt(){
         super();
     }

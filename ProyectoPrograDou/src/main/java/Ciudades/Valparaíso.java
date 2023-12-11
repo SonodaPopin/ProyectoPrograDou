@@ -1,8 +1,13 @@
 package Ciudades;
 
 import java.awt.*;
-
+/**
+ * Clase que representa la ciudad Valparaíso
+ */
 public class Valparaíso extends Ciudad{
+    /**
+     * Método constructor del panel
+     */
     public Valparaíso(){
         super();
     }

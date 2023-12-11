@@ -1,8 +1,13 @@
 package Ciudades;
 
 import java.awt.*;
-
+/**
+ * Clase que representa la ciudad Antofagasta
+ */
 public class Antofagasta extends Ciudad{
+    /**
+     * Método constructor del panel
+     */
     public Antofagasta(){
         super();
     }

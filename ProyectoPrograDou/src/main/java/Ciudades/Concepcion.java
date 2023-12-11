@@ -1,8 +1,13 @@
 package Ciudades;
 
 import java.awt.*;
-
+/**
+ * Clase que representa la ciudad Concepción
+ */
 public class Concepcion extends Ciudad {
+    /**
+     * Método constructor del panel
+     */
     public Concepcion(){
     	super();
     }

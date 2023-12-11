@@ -1,8 +1,13 @@
 package Ciudades;
 
 import java.awt.*;
-
+/**
+ * Clase que representa la ciudad Santiago
+ */
 public class Santiago extends Ciudad {
+    /**
+     * Método constructor del panel
+     */
     public Santiago(){
     	super();
 
