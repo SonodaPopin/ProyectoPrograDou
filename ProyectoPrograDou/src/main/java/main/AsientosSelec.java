@@ -52,5 +52,12 @@ public class AsientosSelec {
     public int getCantidad() {
         return almacen.size();
     }
+    public int getPrecioTotal() {
+		int total = 0;
+    	for(int i=0; i<getCantidad(); i++) {
+    		total = total + almacen.get(i).getPrecio();
+    		}
+    	return total;
+    }
 }
 

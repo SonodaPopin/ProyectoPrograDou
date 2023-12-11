@@ -59,14 +59,26 @@ public class Asiento extends JPanel implements MouseListener{
     		tipo = "Salón Cama";
     	}
     }
+    public String getNombre() {
+    	return nombre;
+    }
     public int getPiso() {
     	return piso;
     }
+    public String getFecha() {
+    	return fecha;
+    }
+    public String getPartida() {
+    	return partida;
+    }
+    public String getDestino() {
+    	return destino;
+    }
+    public String getTipo() {
+    	return tipo;
+    }
     public int getPrecio() {
     	return preciofinal;
-    }
-    public String getNombre() {
-    	return nombre;
     }
 	@Override
 	public void mouseClicked(MouseEvent e) {
