@@ -21,7 +21,6 @@ public class PanelBus extends JPanel{
     public PanelBus(Ventana v, Pasaje p, AsientosSelec as, int numpanel) {
     	this.p = p;
     	pisos = p.getPisos();
-        this.setLayout(null);
         this.setBounds(0,0,1080,720);
         this.setLayout(null);
         this.v = v;

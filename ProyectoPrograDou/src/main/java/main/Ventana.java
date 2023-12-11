@@ -55,16 +55,21 @@ public class Ventana extends JFrame{
     		this.add(pb2);
     		panelactual++;
     	}
-    	else if(boton == 2){
+    	else if(boton == 2 && panelactual == 2){
     		pf = new PanelFinal(this, as);
     		this.remove(pb1);
     		this.remove(pb2);
     		this.add(pf);
+    		panelactual++;
     	}
-    	else {
+    	else if (boton == 1 && panelactual == 1){
     		pf = new PanelFinal(this, as);
     		this.remove(pb1);
     		this.add(pf);
+    		panelactual++;
+    	}
+    	else {
+    		this.remove(pf);
     	}
     	this.repaint();
     }
@@ -73,6 +78,11 @@ public class Ventana extends JFrame{
     		this.remove(pb2);
     		this.add(pb1);
     		panelactual--;
+    	}
+    	else if(boton == 1 && panelactual == 2){
+    		this.remove(pf);
+    		this.add(pb1);
+       		panelactual--;
     	}
     	else {
     		this.remove(pb1);
