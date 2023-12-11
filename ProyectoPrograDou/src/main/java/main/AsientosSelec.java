@@ -39,9 +39,8 @@ public class AsientosSelec {
      * Método para obtener un asiento del depósito
      * @return asiento obtenido
      */
-    public Asiento getAsiento(){
-        Asiento x = almacen.get(0);
-        almacen.remove(0);
+    public Asiento getAsiento(int a){
+        Asiento x = almacen.get(a);
         return x;
     }
 
