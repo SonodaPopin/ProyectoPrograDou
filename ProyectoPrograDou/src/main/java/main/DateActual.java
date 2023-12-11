@@ -56,4 +56,30 @@ public class DateActual {
 			return 1;
 		}
 	}
+	/**
+	 * Método que devuelve el día actual
+	 *
+	 * @return el día actual
+	 */
+	public int getDia() {
+		return dia;
+	}
+
+	/**
+	 * Método que devuelve el mes actual
+	 *
+	 * @return el mes actual
+	 */
+	public int getMes() {
+		return mes;
+	}
+
+	/**
+	 * Método que devuelve el año actual
+	 *
+	 * @return el año actual
+	 */
+	public int getAño() {
+		return año;
+	}
 }
