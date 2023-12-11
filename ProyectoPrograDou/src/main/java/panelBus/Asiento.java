@@ -80,6 +80,14 @@ public class Asiento extends JPanel implements MouseListener{
     public int getPrecio() {
     	return preciofinal;
     }
+	protected void paintComponent(Graphics g) {
+		super.paintComponent(g);
+
+		g.setColor(Color.BLACK);
+		Font font = new Font("Arial", Font.BOLD, 15);
+		g.setFont(font);
+		g.drawString(getNombre(), 10, 25);
+	}
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		// TODO Auto-generated method stub
