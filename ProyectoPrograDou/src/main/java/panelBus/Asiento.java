@@ -8,6 +8,9 @@ import java.awt.*;
 import java.awt.event.*;
 import main.*;
 
+/**
+ * Clase que representa un asiento en el bus
+ */
 public class Asiento extends JPanel implements MouseListener{
 	private int selected = -1;
 	private PanelAsientos pa;
@@ -24,6 +27,15 @@ public class Asiento extends JPanel implements MouseListener{
 	private String tipo;
 	private int preciofinal;
 	
+    /**
+     * Método constructor que crea el asiento
+     * @param pa - panel donde se muestra
+     * @param a - coordenada x
+     * @param b - coordenada y
+     * @param piso - piso donde se encuentra
+     * @param precio - precio 0 para normal y 2 para premium
+     * @param nombre - nombre del asiento
+     */
     public Asiento(PanelAsientos pa, int a, int b, int piso, int precio, String nombre){
     	this.pa = pa;
     	coorx = a;
@@ -47,6 +59,9 @@ public class Asiento extends JPanel implements MouseListener{
         this.setLayout(null);
         ExtraerDatos();
     }
+    /**
+     * Método que extrae los datos de pasaje y se los entrega a asiento
+     */
     public void ExtraerDatos() {
     	fecha = p.getFecha();
     	partida = p.getPartida();
@@ -59,24 +74,52 @@ public class Asiento extends JPanel implements MouseListener{
     		tipo = "Salón Cama";
     	}
     }
+    /**
+     * Método para obtener nombre
+     * @return - nombre
+     */
     public String getNombre() {
     	return nombre;
     }
+    /**
+     * Método para obtener piso
+     * @return - piso
+     */
     public int getPiso() {
     	return piso;
     }
+    /**
+     * Método para obtener fecha
+     * @return - fecha
+     */
     public String getFecha() {
     	return fecha;
     }
+    /**
+     * Método para obtener partida
+     * @return - partida
+     */
     public String getPartida() {
     	return partida;
     }
+    /**
+     * Método para obtener destino
+     * @return - destino
+     */
     public String getDestino() {
     	return destino;
     }
+    /**
+     * Método para obtener tipo
+     * @return - tipo
+     */
     public String getTipo() {
     	return tipo;
     }
+    /**
+     * Método para obtener preciofinal
+     * @return - preciofinal
+     */
     public int getPrecio() {
     	return preciofinal;
     }

@@ -3,10 +3,17 @@ package panelBus;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * Clase que representa un panel que muestra información
+ */
 public class Informacion extends JPanel{
 	private int numpanel;
 	Font font = new Font("Arial", Font.BOLD, 20);
 	Font font30 = new Font("Arial", Font.BOLD, 30);
+	/**
+	 * Método que crea el panel
+	 * @param numpanel - numero que decide si el panel dice de ida o de vuelta
+	 */
 	public Informacion(int numpanel){
 		this.setBounds(800,50,220,300);
 		this.setBackground(new Color(100, 100, 100, 230));

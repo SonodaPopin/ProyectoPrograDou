@@ -4,8 +4,15 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
+/**
+ * Clase que representa un boton para volver seleccionar el primer piso
+ */
 public class BotonPiso1 extends JPanel implements MouseListener{
 	PanelBus pb;
+	/**
+	 * Método para crear el botón
+	 * @param pb - panel donde se muestra el botón
+	 */
 	public BotonPiso1(PanelBus pb){
 		this.pb = pb;
 		this.setBounds(800,400,220,100);

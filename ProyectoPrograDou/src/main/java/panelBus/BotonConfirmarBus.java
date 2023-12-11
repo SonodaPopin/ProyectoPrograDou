@@ -10,10 +10,16 @@ import main.Ventana;
 import javax.swing.*;
 
 import panelPrincipal.PanelPrincipal;
-
+/**
+ * Clase que representa un boton para confirmar
+ */
 public class BotonConfirmarBus extends JPanel implements MouseListener{
 	Ventana v;
 	Color VerdeOscuro = new Color(0,102,0);
+    /**
+     * Método constructor del botón
+     * @param v - ventana sobre la que se crea el boton
+     */
     public BotonConfirmarBus(Ventana v){
     	this.v = v;
         this.setBounds(50,400,300,100);

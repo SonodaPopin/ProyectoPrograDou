@@ -4,6 +4,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
+/**
+ * Clase que representa un panel que muestra asientos
+ */
 public class PanelAsientos extends JPanel{
 	PanelBus pb;
 	AsientoBuilder constructor;
@@ -24,6 +27,11 @@ public class PanelAsientos extends JPanel{
 	Asiento M1, M2, M3, M4;
 	Asiento N1, N2, N3, N4;
 	Font font = new Font("Arial", Font.BOLD, 20);
+	/**
+	 * Método que crea el panel
+	 * @param piso - número que dicta el piso
+	 * @param pb - panel sobre el que se muestra el panel
+	 */
 	public PanelAsientos(int piso, PanelBus pb) {
 		this.piso = piso;
 		this.pb = pb;
@@ -189,12 +197,24 @@ public class PanelAsientos extends JPanel{
 			this.add(N4);
 		}
 	}
+	/**
+	 * Método que añade un asiento
+	 * @param a - asiento a añadir
+	 */
 	public void addAsiento(Asiento a) {
 		pb.addAsiento(a);
 	}
+	/**
+	 * Método que elimina un asiento
+	 * @param a - asiento a elimiar
+	 */
 	public void removeAsiento(Asiento a) {
 		pb.removeAsiento(a);
 	}
+	/**
+	 * Método que entrega el PanelBus sobre el que esta el PanelAsientos
+	 * @return - el PanelBus
+	 */
 	public PanelBus getPB() {
 		return pb;
 	}

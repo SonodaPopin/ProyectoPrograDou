@@ -51,6 +51,10 @@ public class AsientosSelec {
     public int getCantidad() {
         return almacen.size();
     }
+    /**
+     * Método para saber el precio sumado de todos los asientos guardados
+     * @return - precio total
+     */
     public int getPrecioTotal() {
 		int total = 0;
     	for(int i=0; i<getCantidad(); i++) {

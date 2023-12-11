@@ -6,6 +6,9 @@ import panelPrincipal.PanelPrincipal;
 import panelBus.PanelBus;
 import panelFinal.PanelFinal;
 
+/**
+ * Clase que representa la interfaz del programa
+ */
 public class Ventana extends JFrame{
 	private int boton;
 	private int panelactual;
@@ -15,6 +18,9 @@ public class Ventana extends JFrame{
 	Pasaje pa1;
 	Pasaje pa2;
 	AsientosSelec as;
+    /**
+     * Método constructor de la ventana
+     */
     public Ventana() {
         super();
 
@@ -31,6 +37,10 @@ public class Ventana extends JFrame{
         ImageIcon image = new ImageIcon("doubuslogodou.jpg");
         this.setIconImage(image.getImage());
     }
+    /**
+     * Método que pasa de panelPrincipal a panelBus
+     * @param boton - número de pasajes
+     */
     public void Parte2(int boton) {
     	as = new AsientosSelec();
     	this.boton = boton;
@@ -49,6 +59,9 @@ public class Ventana extends JFrame{
     	panelactual = 1;
     	this.repaint();
     }
+    /**
+     * Método para pasar al siguiente panel
+     */
     public void NextPanel() {
     	if(boton == 2 && panelactual == 1) {
     		this.remove(pb1);
@@ -73,6 +86,9 @@ public class Ventana extends JFrame{
     	}
     	this.repaint();
     }
+    /**
+     * Método para volver al panel anterior
+     */
     public void PreviousPanel() {
     	if(boton == 2 && panelactual == 2) {
     		this.remove(pb2);

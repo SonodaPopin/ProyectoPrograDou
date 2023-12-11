@@ -3,9 +3,15 @@ package panelBus;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-
+/**
+ * Clase que representa un boton para volver seleccionar el segundo piso
+ */
 public class BotonPiso2 extends JPanel implements MouseListener{
 	PanelBus pb;
+	/**
+	 * Método para crear el botón
+	 * @param pb - panel donde se muestra el botón
+	 */
 	public BotonPiso2(PanelBus pb){
 		this.pb = pb;
 		this.setBounds(800,520,220,100);

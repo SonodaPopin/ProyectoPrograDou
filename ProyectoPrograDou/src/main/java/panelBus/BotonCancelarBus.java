@@ -11,9 +11,16 @@ import javax.swing.JPanel;
 
 import panelPrincipal.PanelPrincipal;
 
+/**
+ * Clase que representa un boton para volver atrás
+ */
 public class BotonCancelarBus extends JPanel implements MouseListener{
 	Ventana v;
 	Color VerdeOscuro = new Color(0,102,0);
+    /**
+     * Método constructor del botón
+     * @param v - ventana sobre la que se crea el boton
+     */
     public BotonCancelarBus(Ventana v){
     	this.v = v;
         this.setBounds(50,520,300,100);
