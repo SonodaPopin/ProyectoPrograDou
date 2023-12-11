@@ -5,24 +5,24 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class PanelAsientos extends JPanel{
-	private PanelBus pb;
-	private AsientoBuilder constructor;
+	PanelBus pb;
+	AsientoBuilder constructor;
 	private int piso;
-	private Asiento A1, A2;
-	private Asiento B1, B2;
-	private Asiento C1, C2;
-	private Asiento D1, D2, D3, D4;
-	private Asiento E1, E2, E3, E4;
-	private Asiento F1, F2, F3, F4;
-	private Asiento G1, G2;
-
-	private Asiento H1, H2, H3, H4;
-	private Asiento I1, I2;
-	private Asiento J1, J2, J3, J4;
-	private Asiento K1, K2, K3, K4;
-	private Asiento L1, L2, L3, L4;
-	private Asiento M1, M2, M3, M4;
-	private Asiento N1, N2, N3, N4;
+	Asiento A1, A2;
+	Asiento B1, B2;
+	Asiento C1, C2;
+	Asiento D1, D2, D3, D4;
+	Asiento E1, E2, E3, E4;
+	Asiento F1, F2, F3, F4;
+	Asiento G1, G2;
+	
+	Asiento H1, H2, H3, H4;
+	Asiento I1, I2;
+	Asiento J1, J2, J3, J4;
+	Asiento K1, K2, K3, K4;
+	Asiento L1, L2, L3, L4;
+	Asiento M1, M2, M3, M4;
+	Asiento N1, N2, N3, N4;
 	Font font = new Font("Arial", Font.BOLD, 20);
 	public PanelAsientos(int piso, PanelBus pb) {
 		this.piso = piso;
@@ -189,6 +189,12 @@ public class PanelAsientos extends JPanel{
 			this.add(N4);
 		}
 	}
+	public void addAsiento(Asiento a) {
+		pb.addAsiento(a);
+	}
+	public void removeAsiento(Asiento a) {
+		pb.removeAsiento(a);
+	}
 
 	@Override
 	protected void paintComponent(Graphics g) {
@@ -203,9 +209,9 @@ public class PanelAsientos extends JPanel{
 				g.setColor(Color.WHITE);
 				g.setFont(font);
 				g.drawString("Chofer", 35, 58);
-				g.drawString("Escalera", 213, 160);
-				g.drawString("/", 250, 170);
-				g.drawString("Entrada", 212, 200);
+				g.drawString("Entrada", 215, 160);
+				g.drawString("/", 250, 180);
+				g.drawString("Escalera", 210, 200);
 				g.drawString("Baño", 225, 538);
 
 			case 2:

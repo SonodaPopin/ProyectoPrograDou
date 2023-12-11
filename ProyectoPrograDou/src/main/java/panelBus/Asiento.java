@@ -8,13 +8,14 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class Asiento extends JPanel implements MouseListener{
+	private int selected = -1;
 	private PanelAsientos pa;
 	private int coorx;
 	private int coory;
 	private int piso;
 	private int precio;
 	private String nombre;
-    public Asiento(PanelAsientos pb, int a, int b, int piso, int precio, String nombre){
+    public Asiento(PanelAsientos pa, int a, int b, int piso, int precio, String nombre){
     	this.pa = pa;
     	coorx = a;
     	coory = b;
@@ -35,6 +36,15 @@ public class Asiento extends JPanel implements MouseListener{
         }
         this.setLayout(null);
     }
+    public int getPiso() {
+    	return piso;
+    }
+    public int getPrecio() {
+    	return precio;
+    }
+    public String getNombre() {
+    	return nombre;
+    }
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		// TODO Auto-generated method stub
@@ -42,8 +52,16 @@ public class Asiento extends JPanel implements MouseListener{
 	}
 	@Override
 	public void mousePressed(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
+		if(selected == -1) {
+	        this.setBorder(BorderFactory.createLineBorder(Color.RED, 2));
+	        pa.addAsiento(this);
+	        selected = 1;
+		}
+		else {
+			this.setBorder(BorderFactory.createLineBorder(Color.WHITE, 2));
+			pa.removeAsiento(this);
+			selected = -1;
+		}		
 	}
 	@Override
 	public void mouseReleased(MouseEvent e) {
@@ -52,12 +70,15 @@ public class Asiento extends JPanel implements MouseListener{
 	}
 	@Override
 	public void mouseEntered(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
+		if(selected == -1) {
+			this.setBorder(BorderFactory.createLineBorder(Color.WHITE, 2));
+		}
 	}
+	
 	@Override
 	public void mouseExited(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
+		if(selected == -1) {
+			this.setBorder(BorderFactory.createEmptyBorder());
+		}
 	}
 }

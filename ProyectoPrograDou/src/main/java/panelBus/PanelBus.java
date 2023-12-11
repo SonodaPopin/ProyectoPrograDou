@@ -7,6 +7,7 @@ import panelPrincipal.*;
 
 public class PanelBus extends JPanel{
     private Ventana v;
+    private AsientosSelec as;
     private Doubus db;
     private BotonConfirmarBus bcb;
     private BotonCancelarBus bccb;
@@ -16,13 +17,14 @@ public class PanelBus extends JPanel{
 	int pisos;
     private PanelAsientos piso1, piso2;
     private Pasaje p;
-    public PanelBus(Ventana v, Pasaje p) {
+    public PanelBus(Ventana v, Pasaje p, AsientosSelec as) {
     	this.p = p;
     	pisos = p.getPisos();
         this.setLayout(null);
         this.setBounds(0,0,1080,720);
         this.setLayout(null);
         this.v = v;
+        this.as = as;
         
         db = new Doubus();
         inf = new Informacion();
@@ -54,6 +56,12 @@ public class PanelBus extends JPanel{
     	this.remove(piso1);
     	this.add(piso2);
     	v.repaint();
+    }
+    public void addAsiento(Asiento a) {
+    	as.addAsiento(a);
+    }
+    public void removeAsiento(Asiento a) {
+    	as.removeAsiento(a);
     }
     @Override
     protected void paintComponent(Graphics g) {

@@ -11,6 +11,7 @@ public class Ventana extends JFrame{
 	PanelBus pb1, pb2;
 	Pasaje pa1;
 	Pasaje pa2;
+	AsientosSelec as;
     public Ventana() {
         super();
 
@@ -28,16 +29,17 @@ public class Ventana extends JFrame{
         this.setIconImage(image.getImage());
     }
     public void Parte2(int boton) {
+    	as = new AsientosSelec();
     	this.boton = boton;
     	if (boton == 1) {
     		pa1 = pp.crearPasaje(1);
-            pb1 = new PanelBus(this, pa1);
+            pb1 = new PanelBus(this, pa1, as);
     	}
     	else {
     		pa1 = pp.crearPasaje(1);
     		pa2 = pp.crearPasaje(2);
-            pb1 = new PanelBus(this, pa1);
-            pb2 = new PanelBus(this, pa2);
+            pb1 = new PanelBus(this, pa1, as);
+            pb2 = new PanelBus(this, pa2, as);
     	}  
     	this.remove(pp);
     	this.add(pb1);
