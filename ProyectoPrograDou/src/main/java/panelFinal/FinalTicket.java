@@ -1,6 +1,6 @@
 package panelFinal;
 
-import java.awt.Color;
+import java.awt.*;
 
 import javax.swing.*;
 
@@ -26,4 +26,19 @@ public class FinalTicket extends JPanel{
         tipo = a.getTipo();
         preciofinal = a.getPrecio();
 	}
+    @Override
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+
+        g.setColor(Color.BLACK);
+        Font font = new Font("Arial", Font.BOLD, 35);
+        g.setFont(font);
+        g.drawString("Asiento:  " + nombre, 50, 60);
+        g.drawString("Piso:  " + piso, 50, 100);
+        g.drawString("Fecha:  " + fecha, 50, 140);
+        g.drawString("Partida:  " + partida, 50, 180);
+        g.drawString("Destino:  " + destino, 50, 220);
+        g.drawString("Tipo:  " + tipo, 50, 260);
+        g.drawString("Precio:  " + preciofinal, 50, 300);
+    }
 }

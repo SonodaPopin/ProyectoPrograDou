@@ -6,8 +6,8 @@ import java.awt.Graphics;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import main.Ventana;
-import javax.swing.BorderFactory;
-import javax.swing.JPanel;
+
+import javax.swing.*;
 
 import panelPrincipal.PanelPrincipal;
 
@@ -40,8 +40,11 @@ public class BotonConfirmarBus extends JPanel implements MouseListener{
 
 	@Override
 	public void mousePressed(MouseEvent e) {
-		v.NextPanel();
-		
+		try {
+			v.NextPanel();
+		} catch (Exception ex) {
+			JOptionPane.showMessageDialog(this, "Debe eligir al menos un asiento para continuar", "Error", JOptionPane.ERROR_MESSAGE);
+		}
 	}
 
 	@Override

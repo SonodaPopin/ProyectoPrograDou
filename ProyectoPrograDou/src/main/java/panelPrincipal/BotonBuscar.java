@@ -43,17 +43,21 @@ public class BotonBuscar extends JPanel implements MouseListener{
 
 	@Override
 	public void mousePressed(MouseEvent e) {
-		if (da.comprobarFechaIda(pp.bfi.getFecha()[0], pp.bfi.getFecha()[1], pp.bfi.getFecha()[2]) == 1) {
-			if (pp.boton == 1 || (pp.boton == 2 && (da.comprobarFechaVuelta(pp.bfi.getFecha()[0], pp.bfi.getFecha()[1], pp.bfi.getFecha()[2], pp.bfv.getFecha()[0], pp.bfv.getFecha()[1], pp.bfv.getFecha()[2]) == 1))) {
-				this.setBorder(BorderFactory.createEmptyBorder());
-				pp.botonesNo();
-				pp.inicioNo();
-				pp.ticketsSi();
+		if(pp.bdi.getDestino() != pp.bdv.getDestino()) {
+			if (da.comprobarFechaIda(pp.bfi.getFecha()[0], pp.bfi.getFecha()[1], pp.bfi.getFecha()[2]) == 1) {
+				if (pp.boton == 1 || (pp.boton == 2 && (da.comprobarFechaVuelta(pp.bfi.getFecha()[0], pp.bfi.getFecha()[1], pp.bfi.getFecha()[2], pp.bfv.getFecha()[0], pp.bfv.getFecha()[1], pp.bfv.getFecha()[2]) == 1))) {
+					this.setBorder(BorderFactory.createEmptyBorder());
+					pp.botonesNo();
+					pp.inicioNo();
+					pp.ticketsSi();
+				} else {
+					JOptionPane.showMessageDialog(this, "Fecha de vuelta invalida.", "Advertencia", JOptionPane.WARNING_MESSAGE);
+				}
 			} else {
-				JOptionPane.showMessageDialog(this, "Fecha de vuelta invalida.", "Advertencia", JOptionPane.WARNING_MESSAGE);
+				JOptionPane.showMessageDialog(this, "Fecha de Ida invalida.", "Advertencia", JOptionPane.WARNING_MESSAGE);
 			}
 		} else {
-			JOptionPane.showMessageDialog(this, "Fecha de Ida invalida.", "Advertencia", JOptionPane.WARNING_MESSAGE);
+			JOptionPane.showMessageDialog(this, "El punto de destino debe ser distinto al de partida.", "Advertencia", JOptionPane.WARNING_MESSAGE);
 		}
 	}
 
