@@ -33,13 +33,13 @@ public class Ventana extends JFrame{
     	this.boton = boton;
     	if (boton == 1) {
     		pa1 = pp.crearPasaje(1);
-            pb1 = new PanelBus(this, pa1, as);
+            pb1 = new PanelBus(this, pa1, as, 1);
     	}
     	else {
     		pa1 = pp.crearPasaje(1);
     		pa2 = pp.crearPasaje(2);
-            pb1 = new PanelBus(this, pa1, as);
-            pb2 = new PanelBus(this, pa2, as);
+            pb1 = new PanelBus(this, pa1, as, 1);
+            pb2 = new PanelBus(this, pa2, as, 2);
     	}  
     	this.remove(pp);
     	this.add(pb1);

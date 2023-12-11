@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Informacion extends JPanel{
-	public Informacion(){
+	public Informacion(int numpanel){
 		this.setBounds(800,50,220,300);
 		this.setBackground(new Color(100, 100, 100, 230));
 		this.setLayout(null);
