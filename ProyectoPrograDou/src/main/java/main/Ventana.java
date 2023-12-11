@@ -69,7 +69,7 @@ public class Ventana extends JFrame{
     		panelactual++;
     	}
     	else {
-    		this.remove(pf);
+    		pf.Nukear();
     	}
     	this.repaint();
     }

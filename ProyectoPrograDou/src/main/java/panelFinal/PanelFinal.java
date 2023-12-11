@@ -15,6 +15,7 @@ public class PanelFinal extends JPanel{
     private BotonCancelarBus bccb;
     private Doubus db;
     private PanelReservas pr;
+    private PanelGracias pg;
     private ArrayList<FinalTicket> tickets;
     public PanelFinal(Ventana v, AsientosSelec as) {
         this.setBounds(0,0,1080,720);
@@ -28,12 +29,19 @@ public class PanelFinal extends JPanel{
         bccb = new BotonCancelarBus(v);
         db = new Doubus();
         pr = new PanelReservas(tickets, as.getPrecioTotal(), as.getCantidad());
+        pg = new PanelGracias();
         
         this.add(bcb);
         this.add(bccb);
         this.add(db);
         this.add(pr);
         
+    }
+    public void Nukear() {
+        this.remove(bcb);
+        this.remove(bccb);
+        this.remove(pr);
+        this.add(pg);
     }
     @Override
     protected void paintComponent(Graphics g) {
