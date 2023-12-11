@@ -209,11 +209,11 @@ public class PanelAsientos extends JPanel{
 				g.setColor(Color.WHITE);
 				g.setFont(font);
 				g.drawString("Chofer", 35, 58);
-				g.drawString("Escalera", 213, 160);
+				g.drawString("Escalera", 210, 138);
 				g.drawString("/", 250, 175);
 				g.drawString("Entrada", 212, 205);
 				g.drawString("Baño", 225, 538);
-
+				break;
 			case 2:
 				g.setColor(Color.BLACK);
 				g.fillRect(200, 100,100,60);
@@ -221,6 +221,9 @@ public class PanelAsientos extends JPanel{
 				g.setColor(Color.WHITE);
 				g.setFont(font);
 				g.drawString("Escalera", 210, 138);
+				break;
+			default:
+				break;
 		}
 	}
 }
