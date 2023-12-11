@@ -13,6 +13,7 @@ public class FlechaDerechaTicket extends JPanel implements MouseListener{
     /**
      * Método constructor que crea el panel
      * @param pr - panel sobre el que se muestra la flecha
+     * @param cantidad - límite de veces seguidas que se puede presionar la flecha
      */
 	public FlechaDerechaTicket(PanelReservas pr, int cantidad){
 		this.pr = pr;

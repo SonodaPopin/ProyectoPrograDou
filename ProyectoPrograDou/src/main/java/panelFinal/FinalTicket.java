@@ -6,6 +6,9 @@ import javax.swing.*;
 
 import panelBus.Asiento;
 
+/**
+ * Clase que representa un Ticket mostrado en un panel
+ */
 public class FinalTicket extends JPanel{
 	private String nombre;
 	private int piso;
@@ -14,6 +17,10 @@ public class FinalTicket extends JPanel{
 	private String destino;
 	private String tipo;
 	private int preciofinal;
+	/**
+	 * Método que crea el panel
+	 * @param a - asiendo del cual obtiene los datos
+	 */
 	public FinalTicket(Asiento a){
         this.setBounds(0,100,550,370);
         this.setBackground(Color.YELLOW);

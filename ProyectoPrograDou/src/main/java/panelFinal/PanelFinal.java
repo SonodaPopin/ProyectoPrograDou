@@ -10,6 +10,9 @@ import main.*;
 import panelBus.*;
 import panelPrincipal.Doubus;
 
+/**
+ * Clase que representa un panel donde se muestra un resumen de la reserva para decidir si confirmarla o cambiarla
+ */
 public class PanelFinal extends JPanel{
     private BotonConfirmarBus bcb;
     private BotonCancelarBus bccb;
@@ -37,6 +40,9 @@ public class PanelFinal extends JPanel{
         this.add(pr);
         
     }
+    /**
+     * Método que finaliza el programa mostrando un mensaje de agradecimiento
+     */
     public void Nukear() {
         this.remove(bcb);
         this.remove(bccb);
