@@ -1,5 +1,6 @@
 # ProyectoPrograDou
 Numero del Grupo: 6
+
 Nombres de los integrantes:
 Hugo Osvaldo Flores Velasquez || Joaquin Rodrigo Hernandez Espinoza
 
@@ -17,6 +18,10 @@ Nuestro sistema emplea el patrón Builder para crear múltiples instancias de Ti
 
 Captura de pantalla de la Interfaz
 ![image](https://github.com/SonodaPopin/ProyectoPrograDou/assets/146202298/d3807201-9af1-496f-94ce-71e02a8ee43f)
+
+![image](https://github.com/SonodaPopin/ProyectoPrograDou/assets/146202298/cf90a126-2be9-4d0e-aefd-12bed268111e)
+
+![image](https://github.com/SonodaPopin/ProyectoPrograDou/assets/146202298/c582ee07-809e-4177-8012-498655a6ff83)
 
 Deciciones tomadas:
 La primera desición importante que tomamos como equipo fue nuestra manera de dividir el trabajo, esto vino como un aprendizaje por nuestros resultados en la tarea 3, la cual fue un completo desastre debido a nuestra mala organización la cual llevaba a que cada quien hacía el código a su manera, y cuando uno quería usar el código del otro, este no le era de utilidad y tenía casi que reescribirlo completamente, perdiendo muchísimo tiempo. Por ello esta vez nos hemos dividido las tareas cada uno especializándose en ciertos aspectos del proyecto de manera que no nos "pisáramos" sino más bien complementaramos mutuamente, modelo que nos ha hecho trabajar de una manera muy eficiente al no estar perdiendo tiempo en entender o cambiar el código del otro.
