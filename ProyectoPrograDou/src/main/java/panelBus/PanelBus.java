@@ -15,7 +15,7 @@ public class PanelBus extends JPanel{
     private Informacion inf;
     private BotonPiso1 bp1;
     private BotonPiso2 bp2;
-	int pisos;
+	private int pisos;
     private PanelAsientos piso1, piso2;
     private Pasaje p;
     public PanelBus(Ventana v, Pasaje p, AsientosSelec as, int numpanel) {
