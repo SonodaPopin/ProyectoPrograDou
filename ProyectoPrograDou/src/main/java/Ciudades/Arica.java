@@ -1,8 +1,13 @@
 package Ciudades;
 
 import java.awt.*;
-
+/**
+ * Clase que representa la ciudad Arica
+ */
 public class Arica extends Ciudad{
+    /**
+     * Método constructor del panel
+     */
     public Arica(){
         super();
     }

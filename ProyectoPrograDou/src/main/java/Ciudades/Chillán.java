@@ -1,8 +1,13 @@
 package Ciudades;
 
 import java.awt.*;
-
+/**
+ * Clase que representa la ciudad Chillán
+ */
 public class Chillán extends Ciudad{
+    /**
+     * Método constructor del panel
+     */
     public Chillán(){
         super();
     }

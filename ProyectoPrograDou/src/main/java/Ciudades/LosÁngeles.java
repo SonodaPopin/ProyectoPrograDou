@@ -1,8 +1,13 @@
 package Ciudades;
 
 import java.awt.*;
-
+/**
+ * Clase que representa la ciudad Los Ángeles
+ */
 public class LosÁngeles extends Ciudad{
+    /**
+     * Método constructor del panel
+     */
     public LosÁngeles(){
         super();
     }

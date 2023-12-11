@@ -1,8 +1,13 @@
 package numeros;
 
 import java.awt.*;
-
+/**
+ * Clase que representa el numero 6
+ */
 public class Numero6 extends Numero{
+    /**
+     * Método constructor del panel
+     */
     public Numero6(){
         super();
     }

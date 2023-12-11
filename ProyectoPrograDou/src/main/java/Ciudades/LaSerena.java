@@ -1,8 +1,13 @@
 package Ciudades;
 
 import java.awt.*;
-
+/**
+ * Clase que representa la ciudad La Serena
+ */
 public class LaSerena extends Ciudad{
+    /**
+     * Método constructor del panel
+     */
     public LaSerena(){
         super();
     }
