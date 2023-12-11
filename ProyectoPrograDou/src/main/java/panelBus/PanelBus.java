@@ -30,8 +30,8 @@ public class PanelBus extends JPanel{
         
         db = new Doubus();
         inf = new Informacion(numpanel);
-        bcb = new BotonConfirmarBus(this);
-        bccb = new BotonCancelarBus(this);
+        bcb = new BotonConfirmarBus(v);
+        bccb = new BotonCancelarBus(v);
         piso1 = new PanelAsientos(1, this);
         piso2 = new PanelAsientos(2, this);
         

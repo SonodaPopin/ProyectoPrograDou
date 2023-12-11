@@ -5,17 +5,17 @@ import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-
+import main.Ventana;
 import javax.swing.BorderFactory;
 import javax.swing.JPanel;
 
 import panelPrincipal.PanelPrincipal;
 
 public class BotonCancelarBus extends JPanel implements MouseListener{
-	PanelBus pb;
+	Ventana v;
 	Color VerdeOscuro = new Color(0,102,0);
-    public BotonCancelarBus(PanelBus pb){
-    	this.pb = pb;
+    public BotonCancelarBus(Ventana v){
+    	this.v = v;
         this.setBounds(50,520,300,100);
         this.setBackground(VerdeOscuro);
         this.setLayout(null);
@@ -40,7 +40,7 @@ public class BotonCancelarBus extends JPanel implements MouseListener{
 
 	@Override
 	public void mousePressed(MouseEvent e) {
-		// TODO Auto-generated method stub
+		v.PreviousPanel();
 		
 	}
 

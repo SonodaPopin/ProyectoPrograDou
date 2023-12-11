@@ -7,6 +7,7 @@ import panelBus.PanelBus;
 
 public class Ventana extends JFrame{
 	private int boton;
+	private int panelactual;
 	PanelPrincipal pp;
 	PanelBus pb1, pb2;
 	Pasaje pa1;
@@ -43,6 +44,30 @@ public class Ventana extends JFrame{
     	}  
     	this.remove(pp);
     	this.add(pb1);
+    	panelactual = 1;
+    	this.repaint();
+    }
+    public void NextPanel() {
+    	if(boton == 2 && panelactual == 1) {
+    		this.remove(pb1);
+    		this.add(pb2);
+    		panelactual++;
+    	}
+    	else {
+    		this.remove(pb1);
+    	}
+    	this.repaint();
+    }
+    public void PreviousPanel() {
+    	if(boton == 2 && panelactual == 2) {
+    		this.remove(pb2);
+    		this.add(pb1);
+    		panelactual--;
+    	}
+    	else {
+    		this.remove(pb1);
+    		this.add(pp);
+    	}
     	this.repaint();
     }
 }
