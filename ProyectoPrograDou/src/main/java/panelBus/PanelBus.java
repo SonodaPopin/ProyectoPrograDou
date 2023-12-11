@@ -6,16 +6,16 @@ import main.*;
 import panelPrincipal.*;
 
 public class PanelBus extends JPanel{
-	Ventana v;
-	Doubus db;
-	BotonConfirmarBus bcb;
-	BotonCancelarBus bccb;
-	Informacion inf;
-	BotonPiso1 bp1;
-	BotonPiso2 bp2;
+    private Ventana v;
+    private Doubus db;
+    private BotonConfirmarBus bcb;
+    private BotonCancelarBus bccb;
+    private Informacion inf;
+    private BotonPiso1 bp1;
+    private BotonPiso2 bp2;
 	int pisos;
-	PanelAsientos piso1, piso2;
-	Pasaje p;
+    private PanelAsientos piso1, piso2;
+    private Pasaje p;
     public PanelBus(Ventana v, Pasaje p) {
     	this.p = p;
     	pisos = p.getPisos();

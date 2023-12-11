@@ -8,11 +8,11 @@ import Ciudades.*;
  * Clase que representa un panel interactivo para elegir una ciudad
  */
 public abstract class BotonDestino extends JPanel{
-	EnumCiudades[] destinos = EnumCiudades.values();
+	private EnumCiudades[] destinos = EnumCiudades.values();
 	protected int actual;
-	Ciudad d;
-	FlechaDerecha fd;
-	FlechaIzquierda fi;
+	protected Ciudad d;
+	protected FlechaDerecha fd;
+	protected FlechaIzquierda fi;
 	/**
 	 * Método para cambiar a la siguiente ciudad en la lista
 	 */
